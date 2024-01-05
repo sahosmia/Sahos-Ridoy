@@ -24,7 +24,7 @@ function Header() {
               </li>
             ))}
 
-            <button className="btn text-light rounded-full px-5 py-2">
+            <button className="bg-main text-light rounded-full px-5 py-2">
               Hiar Me
             </button>
           </ul>
@@ -47,7 +47,7 @@ function Header() {
             </a>
           </li>
 
-          <button className="btn text-light rounded-full px-5 py-2">
+          <button className="bg-main text-light rounded-full px-5 py-2">
             Hiar Me
           </button>
 

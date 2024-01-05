@@ -9,12 +9,13 @@ module.exports = {
     extend: {
       colors: {
         light: "#ffffff",
-        main: "#FD562A",
+        main: "#fe4e59",
+        // main: "#FD562A",
       },
 
       backgroundImage: {
         "hero-pattern": "url('/images/hero.jpg')",
-        "project-together": "url('/img/bg-1.jpg')",
+        "project-together": "url('/images/bg-1.jpg')",
         // 'footer-texture': "url('/img/footer-texture.png')",
       },
     },

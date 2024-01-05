@@ -25,6 +25,7 @@ import {
 
 import { ImPhone } from "react-icons/im";
 
+import PortfolioNirapad from "@/public/images/portfolio/nirapad.png";
 import Portfolio1 from "@/public/images/portfolio/protfolio-1.png";
 import Portfolio2 from "@/public/images/portfolio/protfolio-2.png";
 
@@ -36,7 +37,7 @@ export const menus = [
 
   {
     title: "Protfolio",
-    link: "portfolios",
+    link: "/portfolio",
   },
 ];
 
@@ -45,7 +46,7 @@ export const targets = [
     icon: <FaBullseye />,
     title: "Pixcel Perfect",
     content:
-      "You will get pixcel perfect website such as figma design. I use tailwind css to design website, It you want to design usign other farmwork, Don't worry I know other Farmwork",
+      "You will get pixcel perfect website such as figma design using tailwind css or Bootstrap",
   },
   {
     icon: <FaRegClock />,
@@ -67,30 +68,32 @@ export const services = [
     //
     icon: <TfiPaintBucket />,
     title: "Web Design",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+    description:
+      "I am expert in Html, Css, Bootstrap, Tailwind, React Js, Vue Js, Next Js ",
   },
   {
     icon: <BiCodeAlt />,
     title: "Web Development",
     description:
-      "Quaerat consectetur adipisicing elit consequatur fugiat amet? Iure.",
+      "Web development: Designing, coding, and maintaining websites for optimal online functionality.",
   },
   {
     icon: <PiMonitor />,
     title: "Single Page Application",
     description:
-      "Amet consectetur adipisicing elit. Quaerat consequatur amet? Iure.",
+      "SPA: Updates content dynamically, avoids full page reloads for smoother browsing.",
   },
   {
     icon: <FaFigma />,
     title: "Figma Design",
-    description: "Lorem ipsum dolor sit amet consequatur fugiat amet? Iure.",
+    description:
+      "Creating designs in Figma involves wireframing, prototyping, and collaborative editing.",
   },
   {
     icon: <GoDatabase />,
     title: "Rest Api",
     description:
-      "Lorem adipisicing elit. Quaerat consequatur fugiat amet? Iure.",
+      "REST API: Web service architecture for communication between client and server.",
   },
 ];
 
@@ -114,6 +117,22 @@ export const aboutPersonalInfoItems = [
 ];
 
 export const portfolios = [
+  {
+    title: "Bd Nirapd",
+    slug: "bd-nirapad",
+    description:
+      "Send Money Safely to Your Loved Ones We help you send money safely to your loved ones. We are committed to delivering your remittances as quickly as possible. We will be engaged in providing your transaction transparency and accountability, Inshallah. ",
+    thumbnail: PortfolioNirapad,
+    images: [PortfolioNirapad, Portfolio2, Portfolio1],
+    live_url: "https://bdnirapad.com/",
+    tecnology: ["Laravel", "JavaScript", "Bootstrap"],
+    github: "https://github.com/sahosmia/Bd-Nirapad",
+    showStatus: true,
+    client: "Contact",
+    type: "Development",
+    duration: "1.5 Months",
+  },
+
   {
     title: "Organic Food Prossesing",
     slug: "organic-food-prossesing",
@@ -145,7 +164,7 @@ export const portfolios = [
     tecnology: ["React", "Tailwind"],
     live_url: "www.sahosmia.netlify.com",
     github: "www.github.com/sahosmia",
-    showStatus: true,
+    showStatus: false,
   },
   {
     title: "Organic Food Prossesing 2",

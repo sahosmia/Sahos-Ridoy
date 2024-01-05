@@ -18,15 +18,15 @@ function WhyWork() {
             className="m-auto block w-3/5 sm:w-auto"
             src="/images/1.png"
             alt=""
-            width="380"
-            height="436"
+            width="3800"
+            height="4360"
           />
           <Image
             className="absolute w-3/5 sm:w-auto bottom-10 md:bottom-0 md:left-0"
             src="/images/2.png"
             alt=""
-            width="380"
-            height="450"
+            width="3800"
+            height="4500"
           />
         </div>
 

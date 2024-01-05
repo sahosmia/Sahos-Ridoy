@@ -3,18 +3,21 @@ import Image from "next/image";
 import PageBannerTitle from "@/components/core/PageBannerTitle";
 import Link from "next/link";
 import { portfolios } from "@/constants";
+import Error from "@/app/error";
 
 const PortfolioDetailsPage = ({ params }) => {
   const { slug } = params;
 
   const portfolio = portfolios.find((item) => item.slug === slug);
   // const [image, setImage] = useState(portfolio.thumbnail);
-
+  if (!portfolio) {
+    return <Error />;
+  }
   return (
     <>
       <PageBannerTitle
         title={portfolio.title}
-        img="/img/portfolio/portfolio-background.jpg"
+        img="/images/portfolio/portfolio-background.jpg"
       />
 
       <div className="py-20">
@@ -50,17 +53,91 @@ const PortfolioDetailsPage = ({ params }) => {
               </div> */}
             </div>
 
-            <h1 className="text-2xl font-bold pb-2  text-gray-700">
+            {/* <h1 className="text-4xl font-bold pb-2  text-gray-700">
               {portfolio.title}
-            </h1>
+            </h1> */}
+
             <p className="pb-4">{portfolio.description}</p>
 
-            <p>
-              <span className="font-medium">Technologhy : </span>
-              <span>{portfolio.tecnology.join(", ")}</span>
-            </p>
+            <div className="block sm:hidden">
+              <p>
+                <span className="font-semibold">Technologhy : </span>
+                <span>{portfolio.tecnology.join(", ")}</span>
+              </p>
 
-            <div className="flex gap-4 mt-4">
+              {portfolio.client && (
+                <p>
+                  <span className="font-semibold">Markectplace : </span>
+                  {portfolio.client === "Contact" && (
+                    <span>Outside of Markectplace</span>
+                  )}
+                </p>
+              )}
+
+              {portfolio.type && (
+                <p>
+                  <span className="font-semibold">Type : </span>
+                  <span>{portfolio.type}</span>
+                </p>
+              )}
+
+              {portfolio.duration && (
+                <p>
+                  <span className="font-semibold">Duration : </span>
+                  <span>{portfolio.duration}</span>
+                </p>
+              )}
+            </div>
+
+            <div className="hidden sm:block max-w-lg">
+              <div className="flex">
+                <div className="w-4/12 ">
+                  <span className="font-semibold">Technologhy </span>
+                </div>
+                <div className="w-1/12 ">:</div>
+                <div className="w-7/12 ">{portfolio.tecnology.join(", ")}</div>
+              </div>
+
+              {portfolio.client && (
+                <div className="flex">
+                  <div className="w-4/12 ">
+                    <span className="font-semibold">Markectplace </span>
+                  </div>
+                  <div className="w-1/12 ">:</div>
+                  <div className="w-7/12 ">
+                    {portfolio.client === "Contact" && (
+                      <span>Outside of Markectplace</span>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {portfolio.type && (
+                <div className="flex">
+                  <div className="w-4/12 ">
+                    <span className="font-semibold">Type </span>
+                  </div>
+                  <div className="w-1/12 ">:</div>
+                  <div className="w-7/12 ">
+                    <span>{portfolio.type}</span>
+                  </div>
+                </div>
+              )}
+
+              {portfolio.duration && (
+                <div className="flex">
+                  <div className="w-4/12 ">
+                    <span className="font-semibold">Duration </span>
+                  </div>
+                  <div className="w-1/12 ">:</div>
+                  <div className="w-7/12 ">
+                    <span>{portfolio.duration}</span>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div className="flex gap-4 mt-8">
               {portfolio.live_url && (
                 <Link
                   href={portfolio.live_url}
