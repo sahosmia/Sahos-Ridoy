@@ -4,8 +4,8 @@ import { skills } from "@/constants";
 
 const Skills = () => {
   return (
-    <div className="py-10 sm:py-16 lg:py-28 relative">
-      <div className="container flex flex-col lg:flex-row items-center  gap-20">
+    <div className="py-5 sm:py-16 lg:py-28 relative">
+      <div className="container flex flex-col lg:flex-row items-center gap-5  md:gap-20">
         <div className="w-full lg:w-1/2">
           <Image
             className="w-4/5 flex m-auto"

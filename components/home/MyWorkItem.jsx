@@ -13,7 +13,7 @@ export default function MyWorkItem({ item, index }) {
     >
       <div className="flex-1">
         <Image
-          className={`rounded-lg h-60 w-full block  object-cover object-center `}
+          className={`rounded-lg h-auto md:h-60 w-full block  object-cover object-center `}
           src={thumbnail}
           alt=""
           width="1000"

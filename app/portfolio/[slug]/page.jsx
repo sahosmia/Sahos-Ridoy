@@ -157,6 +157,7 @@ const PortfolioDetailsPage = ({ params }) => {
                 </Link>
               )}
             </div>
+            {/* <hr className="pt-2" /> */}
           </div>
         </div>
       </div>

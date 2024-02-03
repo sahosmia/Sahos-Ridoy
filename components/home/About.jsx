@@ -24,10 +24,7 @@ function About() {
 
           <div className="flex flex-wrap flex-row gap-5 md:gap-8 mb-5 md:mb-8">
             {aboutPersonalInfoItems.map((item, i) => (
-              <AboutPersonalInfoItem
-                key={i}
-                item={item}
-              ></AboutPersonalInfoItem>
+              <AboutPersonalInfoItem key={i} item={item} />
             ))}
           </div>
 
@@ -40,9 +37,9 @@ function About() {
           </a>
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 flex justify-center items-center">
           <Image
-            className="w-3/5 block m-auto"
+            className="w-3/5 block m-auto rounded mb-10"
             placeholder="blur"
             blurDataURL="false"
             src="/images/avatar.png"

@@ -2,6 +2,7 @@ import Image from "next/image";
 import MyWorkItem from "./MyWorkItem";
 import SectionHead from "./SectionHead";
 import { portfolios } from "@/constants";
+import PortfolioItem from "../PortfolioItem";
 
 function MyWork() {
   const showPortfolios = portfolios.filter((item) => item.showStatus === true);
@@ -10,14 +11,11 @@ function MyWork() {
       className="py-10 sm:py-16 lg:py-28  relative overflow-hidden z-10"
       id="protfolio"
     >
-      <SectionHead
-        title="My Work"
-        des="I try to satisfy client by my work"
-      ></SectionHead>
+      <SectionHead title="My Work" des="I try to satisfy client by my work" />
 
-      <div className="container grid grid-cols-1 xl:grid-cols-3 grid-rows-2 gap-8 ">
+      <div className="container grid grid-cols-1 xl:grid-cols-3  gap-8 ">
         {showPortfolios.map((item, index) => (
-          <MyWorkItem key={index} item={item} index={index}></MyWorkItem>
+          <PortfolioItem key={item.slug} item={item} />
         ))}
       </div>
 
