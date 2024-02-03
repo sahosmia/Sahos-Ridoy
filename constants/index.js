@@ -25,6 +25,7 @@ import {
 
 import { ImPhone } from "react-icons/im";
 
+import EDashPortfolio from "@/public/images/portfolio/Edash.png";
 import PortfolioNirapad from "@/public/images/portfolio/nirapad.png";
 import Portfolio1 from "@/public/images/portfolio/protfolio-1.png";
 import Portfolio2 from "@/public/images/portfolio/protfolio-2.png";
@@ -134,15 +135,19 @@ export const portfolios = [
   },
 
   {
-    title: "Organic Food Prossesing",
-    slug: "organic-food-prossesing",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    thumbnail: Portfolio1,
+    title: "E-dashboard",
+    slug: "e-dashboard-react",
+    description:
+      "A dashboard is an information management tool that receives data from a linked database to provide data visualizations. It typically offers high-level information in one view that end users can use to answer a single question.",
+    thumbnail: EDashPortfolio,
     images: [Portfolio1, Portfolio2, Portfolio1],
     tecnology: ["React", "Tailwind"],
-    live_url: "https://www.sahosmia.netlify.com",
-    github: "https://www.github.com/sahosmia",
+    live_url: "https://e-dash-sahos.vercel.app/",
+    github: "https://github.com/sahosmia/EDash",
     showStatus: true,
+    client: "Contact",
+    type: "Design",
+    duration: "1.5 Months",
   },
   // {
   //   title: "Organic Food Prossesing 2",
