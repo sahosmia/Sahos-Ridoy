@@ -8,7 +8,7 @@ const PortfolioItem = ({ item }) => {
         href={`portfolio/${item.slug}`}
         className="rounded overflow-hidden shadow"
       >
-        <div className="overflow-hidden h-60">
+        <div className="overflow-hidden h-auto md:h-60">
           <Image
             className="transform-gpu hover:scale-[1.1] transition-all h-full"
             src={item.thumbnail}

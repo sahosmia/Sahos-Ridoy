@@ -12,7 +12,7 @@ function MyWork() {
     >
       <SectionHead title="My Work" des="I try to satisfy client by my work" />
 
-      <div className="container grid grid-cols-1 xl:grid-cols-3  gap-8 ">
+      <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-8 ">
         {showPortfolios.map((item, index) => (
           <PortfolioItem key={item.slug} item={item} />
         ))}
