@@ -23,7 +23,7 @@ export default function MyWorkItem({ item, index }) {
 
       <div className=" flex-1 pr-10">
         <Link
-          href={`portfolio/${slug}`}
+          href={`/portfolio/${slug}`}
           className="pt-4 md:pt-0 text-2xl md:text-3xl font-bold text-gray-700 line-clamp-2"
         >
           {title}
@@ -34,7 +34,7 @@ export default function MyWorkItem({ item, index }) {
 
         <div className="hidden md:block mt-6 md:mt-8 mb-4">
           <Link
-            href={`portfolio/${slug}`}
+            href={`/portfolio/${slug}`}
             className="px-4 py-2 bg-main hover:bg-opacity-80 duration-500 text-sm md:text-base font-medium text-light rounded inline"
           >
             Details

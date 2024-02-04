@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function WhyWork() {
   return (
-    <section className="py-10 sm:py-16 lg:py-28 relative">
+    <section className="py-10 sm:py-16  relative">
       <Image
         src="/images/shape-2.png"
         className=" absolute w-20 top-2 right-2"

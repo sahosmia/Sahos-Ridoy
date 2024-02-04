@@ -1,5 +1,4 @@
 import Image from "next/image";
-import MyWorkItem from "./MyWorkItem";
 import SectionHead from "./SectionHead";
 import { portfolios } from "@/constants";
 import PortfolioItem from "../PortfolioItem";
@@ -8,7 +7,7 @@ function MyWork() {
   const showPortfolios = portfolios.filter((item) => item.showStatus === true);
   return (
     <section
-      className="py-10 sm:py-16 lg:py-28  relative overflow-hidden z-10"
+      className="py-10 sm:py-16  relative overflow-hidden z-10"
       id="protfolio"
     >
       <SectionHead title="My Work" des="I try to satisfy client by my work" />
@@ -27,7 +26,7 @@ function MyWork() {
         height="179"
       />
 
-      <div className="circle absolute w-96 h-96 top-1/2 -right-60  rounded-full -translate-y-1/2 -z-10"></div>
+      {/* <div className="circle absolute w-96 h-96 top-1/2 -right-60  rounded-full -translate-y-1/2 -z-10"></div> */}
     </section>
   );
 }

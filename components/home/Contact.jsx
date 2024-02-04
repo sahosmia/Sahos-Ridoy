@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 
 function Contact() {
   return (
-    <section id="contact" className="py-10 sm:py-16 lg:py-20">
+    <section id="contact" className="py-10 sm:py-16">
       {/* <div className="container text-center">
         <p className="sub-title">Feel free to contact me anytimes</p>
         <h3 className="section-heading">Get in Touch</h3>

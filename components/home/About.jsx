@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function About() {
   return (
-    <section className="py-10 sm:py-16 lg:py-20 relative" id="about">
+    <section className="py-10 sm:py-16  relative" id="about">
       <div className="absolute rounded-full w-5 h-5 bg-orange-300  top-64 left-40 -z-10"></div>
       <div className="absolute rounded-full w-3 h-3 bg-pink-300  bottom-64 right-40 -z-10"></div>
       <div className="absolute rounded border-2 border-red-600 w-4 md:w-10 h-4 md:h-10 bottom-96 right-96 -z-10"></div>

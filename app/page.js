@@ -8,18 +8,16 @@ import Target from "@/components/home/Target";
 import WhyWork from "@/components/home/WhyWork";
 
 export default function Home() {
-  
   return (
-    <main className="">
+    <main>
       <Hero />
-      <Target />
       <About />
       <Skills />
       <Service />
       <MyWork />
+      <Target />
       <WhyWork />
       <ProjectTogether />
-      
     </main>
   );
 }
