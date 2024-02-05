@@ -31,6 +31,8 @@ import PortfolioNirapad from "@/public/images/portfolio/nirapad.png";
 import ConstructionPortfolio from "@/public/images/portfolio/construction.png";
 import PersonalPortfolio from "@/public/images/portfolio/personal.png";
 import FigmaToReactPortfolio from "@/public/images/portfolio/easexpence.png";
+import LoginPortfolio from "@/public/images/portfolio/login.png";
+import LonesomLabsPortfolio from "@/public/images/portfolio/lonesomelabs.png";
 
 export const menus = [
   {
@@ -174,10 +176,25 @@ export const portfolios = [
     tecnology: ["React", "Tailwind"],
     live_url: "https://sahos-mia-construction.netlify.app/",
     github: "https://github.com/sahosmia/Construction-React-Tailwind",
-    showStatus: true,
+    showStatus: false,
     client: "Contact",
     type: "Design",
     duration: "1 Week",
+  },
+  {
+    title: "Lonesome Labs",
+    slug: "lonesome-labs-tailwind",
+    description:
+      "It was a online marketplace client project for figma to tailwind css.",
+    thumbnail: LonesomLabsPortfolio,
+    images: [],
+    tecnology: ["Tailwind"],
+    live_url: "",
+    github: "https://github.com/sahosmia/Lonesome-Labs-2nd-version",
+    showStatus: true,
+    client: "Upwork",
+    type: "Design",
+    duration: "2 Week",
   },
 
   {
@@ -204,10 +221,27 @@ export const portfolios = [
     tecnology: ["React", "Tailwind"],
     live_url: "https://easexpense.vercel.app/",
     github: "https://github.com/sahosmia/Easexpense",
-    showStatus: true,
+    showStatus: false,
     client: "Upwork",
     type: "Design",
     duration: "3 Days",
+  },
+
+  {
+    title: "DEB Login Page",
+    slug: "deb-login-page",
+    description:
+      "It is a login page design with figma. It was disigned for Digital Experts in Bangladesh.",
+    thumbnail: LoginPortfolio,
+    images: [],
+    tecnology: ["Figma"],
+    live_url:
+      "https://www.behance.net/gallery/165236487/Login-Page-Design-with-Figma",
+    github: "",
+    showStatus: true,
+    client: "Contact",
+    type: "Figma Design",
+    duration: "1 Days",
   },
 ];
 

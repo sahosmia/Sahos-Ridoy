@@ -6,6 +6,7 @@ import Service from "@/components/home/Service";
 import Skills from "@/components/home/Skills";
 import Target from "@/components/home/Target";
 import WhyWork from "@/components/home/WhyWork";
+import { portfolios } from "@/constants";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <About />
       <Skills />
       <Service />
-      <MyWork />
+      <MyWork portfolios={portfolios} />
       <Target />
       <WhyWork />
       <ProjectTogether />

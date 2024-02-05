@@ -1,10 +1,16 @@
 import Image from "next/image";
 import SectionHead from "./SectionHead";
-import { portfolios } from "@/constants";
 import PortfolioItem from "../PortfolioItem";
 
-function MyWork() {
+function MyWork({ portfolios }) {
   const showPortfolios = portfolios.filter((item) => item.showStatus === true);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
   return (
     <section
       className="py-10 sm:py-16  relative overflow-hidden z-10"
@@ -13,9 +19,10 @@ function MyWork() {
       <SectionHead title="My Work" des="I try to satisfy client by my work" />
 
       <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-8 ">
-        {showPortfolios.map((item, index) => (
-          <PortfolioItem key={item.slug} item={item} />
-        ))}
+        {showPortfolios.map(
+          (item) =>
+            item.showStatus && <PortfolioItem key={item.slug} item={item} />
+        )}
       </div>
 
       <Image
