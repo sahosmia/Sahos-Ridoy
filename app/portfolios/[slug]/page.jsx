@@ -1,15 +1,20 @@
-// import React, { useState } from "react";
 import Image from "next/image";
 import PageBannerTitle from "@/components/core/PageBannerTitle";
 import Link from "next/link";
 import { portfolios } from "@/constants";
 import Error from "@/app/error";
 
+
+export function generateStaticParams() {
+  return portfolios.map((item) => ({
+    slug: item.slug,
+  }));
+}
+
 const PortfolioDetailsPage = ({ params }) => {
   const { slug } = params;
 
   const portfolio = portfolios.find((item) => item.slug === slug);
-  // const [image, setImage] = useState(portfolio.thumbnail);
   if (!portfolio) {
     return <Error />;
   }
@@ -33,29 +38,10 @@ const PortfolioDetailsPage = ({ params }) => {
                   height="400"
                 />
               </div>
-              {/* <div className="h-16 md:h-20 flex gap-2 mb-10 border p-1 overflow-auto">
-                <Image
-                  src={portfolio.thumbnail}
-                  className="h-auto object-cover shadow inline-block cursor-pointer"
-                  alt={portfolio.title}
-                  // onClick={() => setImage(portfolio.thumbnail)}
-                />
-
-                {portfolio.images.map((item, key) => (
-                  <Image
-                    key={key}
-                    src={item}
-                    className="h-auto object-cover shadow inline-block cursor-pointer rounded"
-                    alt={portfolio.title}
-                    // onClick={() => setImage(item)}
-                  />
-                ))}
-              </div> */}
+         
             </div>
 
-            {/* <h1 className="text-4xl font-bold pb-2  text-gray-700">
-              {portfolio.title}
-            </h1> */}
+         
 
             <p className="pb-4">{portfolio.description}</p>
 
