@@ -5,7 +5,7 @@ const PortfolioItem = ({ item }) => {
   return (
     <div>
       <Link
-        href={`portfolio/${item.slug}`}
+        href={`portfolios/${item.slug}`}
         className="rounded overflow-hidden shadow"
       >
         <div className="overflow-hidden h-auto md:h-60">
