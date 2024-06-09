@@ -1,4 +1,4 @@
-import { aboutPersonalInfoItems } from "@/constants";
+import { aboutPersonalInfoItems } from "../../constants";
 import { AboutPersonalInfoItem } from "./AboutPersonalInfoItem";
 import Image from "next/image";
 

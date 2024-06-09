@@ -1,6 +1,7 @@
-import ContactSocialItem from "./ContactSocialItem";
-import { contacts } from "@/constants";
+
+import { contacts } from "../../constants";
 import ContactForm from "./ContactForm";
+import ContactSocialItem from "./ContactSocialItem";
 
 function Contact() {
   return (

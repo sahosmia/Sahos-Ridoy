@@ -1,8 +1,8 @@
 import Image from "next/image";
-import PageBannerTitle from "@/components/core/PageBannerTitle";
 import Link from "next/link";
 import { portfolios } from "@/constants";
 import Error from "@/app/error";
+import PageBannerTitle from "../../../components/core/PageBannerTitle";
 
 
 export function generateStaticParams() {

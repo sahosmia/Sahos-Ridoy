@@ -1,5 +1,5 @@
-import { menus } from "@/constants";
 import Link from "next/link";
+import { menus } from "../../constants";
 
 function Header() {
   return (

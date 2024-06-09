@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { socials_links } from "@/constants";
+import { socials_links } from "../../constants";
 
 function ProjectTogether() {
   return (

@@ -1,4 +1,4 @@
-export default function SectionHead({ title, des, content, center = false }) {
+export default function SectionHead({ title, des, content } : {title:string, des:string, content?:string}) {
   return (
     <div className="container mb-5">
       <p className="sub-title">{des}</p>

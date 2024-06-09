@@ -1,5 +1,5 @@
-import { why_work_items } from "@/constants";
 import Image from "next/image";
+import { why_work_items } from "../../constants";
 
 function WhyWork() {
   return (

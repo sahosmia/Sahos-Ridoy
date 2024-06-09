@@ -1,38 +1,12 @@
-import { TfiPaintBucket } from "react-icons/tfi";
-import { PiMonitor } from "react-icons/pi";
-import { GoDatabase } from "react-icons/go";
-import { BiCodeAlt } from "react-icons/bi";
-
-import {
-  FaRegSmile,
-  FaEnvelope,
-  FaRegSmileBeam,
-  FaRegClock,
-  FaFigma,
-} from "react-icons/fa";
-
-import {
-  FaLinkedinIn,
-  FaYoutube,
-  FaInstagram,
-  FaFacebookF,
-  FaTwitter,
-  FaMap,
-  FaRepeat,
-  FaRegHeart,
-  FaBullseye,
-} from "react-icons/fa6";
-
+import EDashPortfolio from "../public/images/portfolio/Edash.png";
+import OrganicPortfolio from "../public/images/portfolio/organic.png";
+import PortfolioNirapad from "../public/images/portfolio/nirapad.png";
+import ConstructionPortfolio from "../public/images/portfolio/construction.png";
+import PersonalPortfolio from "../public/images/portfolio/personal.png";
+import FigmaToReactPortfolio from "../public/images/portfolio/easexpence.png";
+import LoginPortfolio from "../public/images/portfolio/login.png";
+import LonesomLabsPortfolio from "../public/images/portfolio/lonesomelabs.png";
 import { ImPhone } from "react-icons/im";
-
-import EDashPortfolio from "@/public/images/portfolio/Edash.png";
-import OrganicPortfolio from "@/public/images/portfolio/organic.png";
-import PortfolioNirapad from "@/public/images/portfolio/nirapad.png";
-import ConstructionPortfolio from "@/public/images/portfolio/construction.png";
-import PersonalPortfolio from "@/public/images/portfolio/personal.png";
-import FigmaToReactPortfolio from "@/public/images/portfolio/easexpence.png";
-import LoginPortfolio from "@/public/images/portfolio/login.png";
-import LonesomLabsPortfolio from "@/public/images/portfolio/lonesomelabs.png";
 
 export const menus = [
   {
@@ -45,6 +19,21 @@ export const menus = [
     link: "/portfolio",
   },
 ];
+
+import {
+  FaBullseye,
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaMap,
+  FaRegHeart,
+  FaRegSmile,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
+import { FaRegClock } from "react-icons/fa";
+import { FaRegSmileBeam } from "react-icons/fa";
 
 export const targets = [
   {
@@ -66,6 +55,13 @@ export const targets = [
       "I will try to give my best for you dream project. I think that project is valueless if I could not make happy my client",
   },
 ];
+
+import { TfiPaintBucket } from "react-icons/tfi";
+import { BiCodeAlt } from "react-icons/bi";
+import { PiMonitor } from "react-icons/pi";
+import { FaFigma } from "react-icons/fa";
+import { GoDatabase } from "react-icons/go";
+import { FaRepeat } from "react-icons/fa6";
 
 // Service
 export const services = [

@@ -1,4 +1,4 @@
-import { targets } from "@/constants";
+import { targets } from "../../constants";
 import TargetItem from "./TargetItem";
 
 function Target() {

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import FaqSide from "@/public/images/faq2.jpg";
-import { skills } from "@/constants";
+import FaqSide from "../../public/images/faq2.jpg";
+import { skills } from "../../constants";
 
 const Skills = () => {
   return (

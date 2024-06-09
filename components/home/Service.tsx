@@ -1,4 +1,4 @@
-import { services } from "@/constants";
+import { services } from "../../constants";
 import SectionHead from "./SectionHead";
 import ServiceItem from "./ServiceItem";
 
