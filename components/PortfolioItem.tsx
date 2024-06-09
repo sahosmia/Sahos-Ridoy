@@ -1,38 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
+import PortfolioItemLinkButton from "./PortfolioItemLinkButton";
 
 const PortfolioItem = ({ item }) => {
   return (
-    <div>
-      <Link
-        href={`portfolios/${item.slug}`}
-        className="rounded overflow-hidden shadow"
-      >
-        <div className="overflow-hidden h-auto md:h-60">
-          <Image
-            className="transform-gpu hover:scale-[1.1] transition-all h-full"
-            src={item.thumbnail}
-            alt={item.title}
-            width="1000"
-            height="750"
-          />
-        </div>
-        <div className="py-5">
-          <h5 className="pt-4 md:pt-0 text-xl md:text-2xl font-semibold text-gray-800 line-clamp-2">
-            {item.title}
-          </h5>
-          <p className="pt-2 md:pt-4 text-gray-500 line-clamp-3">
-            {item.description}
-          </p>
-          <Link
-            href={`portfolio/${item.slug}`}
-            className="mt-4  text-main  hover:text-opacity-80 transition-all text-sm md:text-base font-medium rounded inline-block underline"
-          >
-            View details
-          </Link>
-        </div>
-      </Link>
-    </div>
+    <Link
+      href={`portfolios/${item.slug}`}
+      className="rounded overflow-hidden shadow max-w-96 max-md:max-w-80 z-10 m-auto"
+    >
+      <div className="overflow-hidden h-40 md:h-60 relative">
+        <Image
+          className="hover:scale-[1.1] transition-all duration-300 h-full object-cover"
+          src={item.thumbnail}
+          alt={item.title}
+          fill
+          placeholder="blur"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
+      <div className="p-5">
+        <h5 className="pt-4 md:pt-0 text-xl md:text-2xl font-semibold text-gray-800 line-clamp-2">
+          {item.title}
+        </h5>
+        <p className="pt-2 md:pt-4 text-gray-500 line-clamp-3">
+          {item.description}
+        </p>
+        <PortfolioItemLinkButton slug={item.slug} />
+      </div>
+    </Link>
   );
 };
 

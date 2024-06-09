@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { why_work_items } from "../../constants";
+import FirstImage from "../../public/images/1.png";
+import SecondImage from "../../public/images/2.png";
+import ShapImage from "../../public/images/shape-2.png";
 
 function WhyWork() {
   return (
     <section className="py-10 sm:py-16  relative">
       <Image
-        src="/images/shape-2.png"
+        src={ShapImage}
         className=" absolute w-20 top-2 right-2"
         alt=""
         width="200"
@@ -16,17 +19,19 @@ function WhyWork() {
         <div className="pb-48 lg:pb-20 md:mb-16 flex-1 relative after:absolute after:top-24 after:left-2 sm:after:top-40 sm:after:left-20 lg:after:top-36 lg:after:left-0 xl:after:left-20 after:w-6 sm:after:w-10 after:h-6 sm:after:h-10 before:bottom-16 before:right-10 sm:before:right-40 md:before:bottom-20 md:before:right-60 lg:before:right-10 xl:before:right-60 xl:before:bottom-5 before:w-10 before:h-10 md:before:w-20 md:before:h-20 after:bg-main after:rounded before:absolute before:rounded before:border-main before:border-4">
           <Image
             className="m-auto block w-3/5 sm:w-auto"
-            src="/images/1.png"
+            src={FirstImage}
             alt=""
             width="3800"
             height="4360"
+            placeholder="blur"
           />
           <Image
             className="absolute w-3/5 sm:w-auto bottom-10 md:bottom-0 md:left-0"
-            src="/images/2.png"
+            src={SecondImage}
             alt=""
             width="3800"
             height="4500"
+            placeholder="blur"
           />
         </div>
 
@@ -47,7 +52,7 @@ function WhyWork() {
               <div key={i} className="flex flex-col md:flex-row gap-3 md:gap-5">
                 <div>
                   <span className="bg-main text-light w-12 md:w-16 h-12 md:h-16 flex justify-center items-center rounded-full text-xl md:text-2xl">
-                   {item.icon}
+                    {item.icon}
                   </span>
                 </div>
                 <div>

@@ -16,8 +16,8 @@ export default function MyWorkItem({ item, index }) {
           className={`rounded-lg h-auto md:h-60 w-full block  object-cover object-center `}
           src={thumbnail}
           alt=""
-          width="1000"
-          height="700"
+          fill
+          placeholder="blur"
         />
       </div>
 
@@ -26,7 +26,7 @@ export default function MyWorkItem({ item, index }) {
           href={`/portfolio/${slug}`}
           className="pt-4 md:pt-0 text-2xl md:text-3xl font-bold text-gray-700 line-clamp-2"
         >
-          {title}
+          {title} 2
         </Link>
         <p className="pt-2 md:pt-4 text-gray-400 line-clamp-3 md:line-clamp-4 text-base">
           {description}

@@ -30,8 +30,8 @@ function MyWork() {
         src="/images/shape.png"
         className=" absolute w-16 md:w-28 bottom-5 left-2"
         alt=""
-        width="179"
-        height="179"
+        width="100"
+        height="100"
       />
 
       {/* <div className="circle absolute w-96 h-96 top-1/2 -right-60  rounded-full -translate-y-1/2 -z-10"></div> */}

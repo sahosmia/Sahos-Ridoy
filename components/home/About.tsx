@@ -1,6 +1,7 @@
 import { aboutPersonalInfoItems } from "../../constants";
 import { AboutPersonalInfoItem } from "./AboutPersonalInfoItem";
 import Image from "next/image";
+import Me from "../../public/images/avatar.png"
 
 function About() {
   return (
@@ -41,11 +42,10 @@ function About() {
           <Image
             className="w-3/5 block m-auto rounded mb-10"
             placeholder="blur"
-            blurDataURL="false"
-            src="/images/avatar.png"
+            src={Me}
             alt="Sahos Mia"
             width="600"
-            height="750"
+            height="650"
           />
         </div>
       </div>

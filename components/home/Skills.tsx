@@ -6,13 +6,14 @@ const Skills = () => {
   return (
     <div className="py-5 sm:py-16  relative">
       <div className="container flex flex-col lg:flex-row items-center gap-5  md:gap-20">
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 relative h-80 sm:h-[500px]">
           <Image
             className="w-4/5 flex m-auto"
             src={FaqSide}
             alt="Faq - Sahos"
-            width="1000"
-            height="1000"
+            fill
+            placeholder="blur"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <div className="w-full lg:w-2/4 ">
