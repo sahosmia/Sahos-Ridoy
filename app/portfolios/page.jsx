@@ -1,6 +1,8 @@
-import PortfolioItem from "@/components/PortfolioItem";
-import { portfolios } from "@/constants";
 import PageBannerTitle from "../../components/core/PageBannerTitle"
+import { portfolios } from "../../constants";
+import PortfolioItem from "../../components/PortfolioItem"
+
+
 const Portfolios = () => {
   return (
     <>

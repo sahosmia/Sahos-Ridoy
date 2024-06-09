@@ -1,5 +1,5 @@
-import { posts } from "@/constants";
 import React from "react";
+import { posts } from "../../../constants";
 
 export function generateStaticParams() {
   return posts.map((item) => ({

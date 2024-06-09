@@ -71,7 +71,7 @@ const ContactForm = () => {
 
           <div>
             <textarea
-              rows="5"
+              rows={5}
               name="message"
               placeholder="Write Your Massage Here"
               className="w-full py-2 md:py-4 px-2 md:px-3 text-sm md:text-base outline outline-1 outline-slate-300 focus:outline-main focus:outline-1 rounded "

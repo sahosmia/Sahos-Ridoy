@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { portfolios } from "@/constants";
-import Error from "@/app/error";
 import PageBannerTitle from "../../../components/core/PageBannerTitle";
-
+import {portfolios} from "../../../constants/index"
+import Error from "../../error"
 
 export function generateStaticParams() {
   return portfolios.map((item) => ({

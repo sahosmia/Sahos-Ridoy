@@ -1,5 +1,5 @@
-import { posts } from "@/constants";
 import Link from "next/link";
+import { posts } from "../../constants";
 
 export default function Home() {
  
