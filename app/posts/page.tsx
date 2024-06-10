@@ -1,8 +1,16 @@
 import Link from "next/link";
 import { posts } from "../../constants";
+import { Metadata } from "next";
+
+
+
+export const metadata: Metadata = {
+  title: "Posts Page",
+  description: "Sahos mia is a profetional web developer",
+};
+
 
 export default function Home() {
- 
   return (
     <main className="">
       <h1 className="text-2xl text-bold">All Post</h1>

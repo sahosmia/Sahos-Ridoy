@@ -1,10 +1,15 @@
 "use client"
 import Link from "next/link";
 import PageBannerTitle from "../components/core/PageBannerTitle";
+import { Metadata } from "next";
 
-export default function Error() {
+export const metadata: Metadata = {
+  title: "Not Found",
+  description: "Sahos mia is a profetional web developer",
+};
 
-  
+
+export default function NotFound() {
   return (
     <>
       <PageBannerTitle

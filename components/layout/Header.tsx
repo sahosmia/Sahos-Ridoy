@@ -39,12 +39,12 @@ function Header() {
           className="hidden flex-col absolute top-20 bg-black bg-opacity-90 w-full gap-4 items-center rounded-md py-10"
         >
           <li>
-            <a
-              href="#"
+            <Link
+              href="/"
               className="text-light font-medium text-sm hover:text-main transition ease-in-out duration-300"
             >
               Home
-            </a>
+            </Link>
           </li>
 
           <button className="bg-main text-light rounded-full px-5 py-2">

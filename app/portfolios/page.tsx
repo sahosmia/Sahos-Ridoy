@@ -1,6 +1,13 @@
 import PageBannerTitle from "../../components/core/PageBannerTitle"
 import { portfolios } from "../../constants";
 import PortfolioItem from "../../components/PortfolioItem"
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "Portfolios Page",
+  description: "Sahos mia is a profetional web developer",
+};
 
 
 const Portfolios = () => {
@@ -9,8 +16,6 @@ const Portfolios = () => {
       <PageBannerTitle
         title="Portfolio Page"
         img="/images/portfolio/portfolio-background.jpg"
-        width="200"
-        height="200"
       />
 
       <div className="pb-10">

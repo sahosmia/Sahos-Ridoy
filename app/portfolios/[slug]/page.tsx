@@ -2,7 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import PageBannerTitle from "../../../components/core/PageBannerTitle";
 import { portfolios } from "../../../constants/index";
-import Error from "../../error";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const slug = params.slug;
+  const portfolio = portfolios.find((item) => item.slug === slug);
+  return {
+    title: `${portfolio.title} | Portfolio`,
+  };
+}
 
 export function generateStaticParams() {
   return portfolios.map((item) => ({
@@ -15,7 +28,7 @@ const PortfolioDetailsPage = ({ params }) => {
 
   const portfolio = portfolios.find((item) => item.slug === slug);
   if (!portfolio) {
-    return <Error />;
+    return notFound();
   }
   return (
     <>
