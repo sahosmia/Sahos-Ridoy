@@ -5,7 +5,7 @@ import PortfolioItemLinkButton from "./PortfolioItemLinkButton";
 const PortfolioItem = ({ item }) => {
   return (
     <Link
-      href={`portfolios/${item.slug}`}
+      href={`/portfolios/${item.slug}`}
       className="rounded overflow-hidden shadow max-w-96 max-md:max-w-80 z-10 m-auto"
     >
       <div className="overflow-hidden h-40 md:h-60 relative">
