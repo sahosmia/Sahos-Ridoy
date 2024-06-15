@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ShareButtons from "@/components/ShareButtons";
 
 const PortfolioItemDetails = ({ portfolio }) => {
   return (
@@ -119,6 +120,7 @@ const PortfolioItemDetails = ({ portfolio }) => {
             </Link>
           )}
         </div>
+        <ShareButtons slug={portfolio.slug}/>
       </div>
     </div>
   );
