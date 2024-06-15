@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import {
   FacebookIcon,
   FacebookShareButton,
@@ -14,14 +15,19 @@ import {
 } from "react-share";
 
 const ShareButtons = ({ slug }: { slug: string }) => {
+  const [url, setUrl] = useState("");
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const siteUrl = window.location.origin;
+      const url = `${siteUrl}/portfolios/${slug}`;
+      setUrl(url);
+    }
+  }, [slug]);
 
-    const siteUrl = window.location.origin;
-    const url = `${siteUrl}/portfolios/${slug}`;
-
-
-  
-  
+  if (!url) {
+    return null; // Or a loading spinner if you prefer
+  }
 
   return (
     <div className="flex gap-1 items-center pt-2">
