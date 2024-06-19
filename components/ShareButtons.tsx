@@ -28,6 +28,7 @@ const ShareButtons = ({ slug }: { slug: string }) => {
   if (!url) {
     return null; // Or a loading spinner if you prefer
   }
+  
 
   return (
     <div className="flex gap-1 items-center pt-2">

@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { posts } from "../../constants";
 import { Metadata } from "next";
+import PageBannerTitle from "@/components/core/PageBannerTitle";
+import PostItem from "@/components/posts/PostItem";
 
 
 
@@ -12,16 +13,23 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="">
-      <h1 className="text-2xl text-bold">All Post</h1>
-      <ul className="flex gap-5">
-        {posts.map((post) => (
-          <li key={post.id}>
-            <Link href={`/posts/${post.id}`}>{post.title}</Link>
-          </li>
-        ))}
-        <li></li>
-      </ul>
-    </main>
+    <>
+      <PageBannerTitle
+        title="All Posts"
+        img="/images/portfolio/portfolio-background.jpg"
+      />
+
+      <div className="pb-10">
+        <div>
+          <div className="container">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-20">
+              {posts.map((item) => (
+                <PostItem key={item.slug} item={item} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

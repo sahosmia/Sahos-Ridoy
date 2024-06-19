@@ -18,6 +18,10 @@ export const menus = [
     title: "Protfolios",
     link: "/portfolios",
   },
+  {
+    title: "Posts",
+    link: "/posts",
+  },
 ];
 
 import {
@@ -300,8 +304,14 @@ export const socials_links = [
   { icon: <FaYoutube />, val: "https://www.youtube.com/@SahosMia" },
 ];
 
+import HtmlInterviewQuestions from "@/public/images/posts/html-interview-questions.png";
 export const posts = [
-  { id: 1, title: "post 1" },
-  { id: 2, title: "post 2" },
-  { id: 3, title: "post 3" },
+  {
+    title: "Html Interview Questions",
+    slug: "html-interview-questions",
+    content:
+      "<div class='flex flex-col gap-8'><div><h2 class='font-bold pb-2'>What are Semantic and non-semantic tags in HTML?</h2><p>Semantic HTML tags are tags that define the meaning of the content they contain. For example, tags like &lt;header&gt;, &lt;article&gt;, and &lt;footer&gt; are semantic HTML tags. They clearly indicate the role of the content they contain. On the other hand, tags like &lt;div&gt; and &lt;span&gt; are typical examples of non-semantic HTML elements.</p></div><div><h2 class='font-bold pb-2'>What are empty tags in HTML?</h2><p>An empty element is a component that doesn't have any embedded elements or text elements. Empty tags contain only the opening tag but they perform some action in the webpage. For example, &lt;br&gt; tag is an empty tag.</p></div><div><h2 class='font-bold pb-2'>What will happen if we don't pass doctype?</h2><p>If you don't declare the doctype, browsers can interpret the document as something else other than HTML and switch into quirks mode, which is, basically, a mode for documents with no doctype declaration. There can be a lot of quirks in the quirks mode; it can pretty much mess up how your document appears on the screen!</p></div><div><h2 class='font-bold pb-2'>What are the differences between &lt;div&gt; and &lt;span&gt; elements in HTML?</h2><p>Span and div are both generic HTML elements that group together related parts of a web page. However, they serve different functions. A div element is used for block-level organization and styling of page elements, whereas a span element is used for inline organization and styling.</p></div><div><h2 class='font-bold pb-2'>Name any 5 Tags which are include in HTML5 and its application</h2><ul><li>&lt;article&gt;</li><li>&lt;nav&gt;</li><li>&lt;figure&gt;</li><li>&lt;aside&gt;</li><li>&lt;section&gt;</li></ul></div></div>",
+    thumbnail: HtmlInterviewQuestions,
+    showStatus: true,
+  },
 ];
