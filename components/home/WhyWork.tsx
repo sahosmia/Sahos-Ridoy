@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import { why_work_items } from "../../constants";
 import FirstImage from "../../public/images/1.png";
 import SecondImage from "../../public/images/2.png";
 import ShapImage from "../../public/images/shape-2.png";
+import { motion } from "framer-motion";
+import { serviceMotion, skillMotion } from "@/lib/motion";
 
 function WhyWork() {
   return (
@@ -36,20 +39,32 @@ function WhyWork() {
         </div>
 
         <div className="flex-1">
-          <p className="sub-title">Why Work With Me</p>
+          <motion.p {...skillMotion({ delay: 0.3 })} className="sub-title">
+            Why Work With Me
+          </motion.p>
 
-          <h3 className="section-heading leading-tight mb-3 md:mb-5 ">
+          <motion.h3
+            {...skillMotion({ delay: 0.6 })}
+            className="section-heading leading-tight mb-3 md:mb-5 "
+          >
             Best result with top user experience
-          </h3>
-          <p className="text-slate-400 mb-14 pr-16 leading-loose">
+          </motion.h3>
+          <motion.p
+            {...skillMotion({ delay: 0.9 })}
+            className="text-slate-400 mb-14 pr-16 leading-loose"
+          >
             Incidunt iure laboriosam unde perferendis odit pariatur illum sunt
             aspernatur voluptas harum tempora corporis, modi ad quaerat
             inventore.
-          </p>
+          </motion.p>
 
           <div className="flex flex-col gap-12">
             {why_work_items.map((item, i) => (
-              <div key={i} className="flex flex-col md:flex-row gap-3 md:gap-5">
+              <motion.div
+                {...skillMotion({ delay: i * 0.3 })}
+                key={i}
+                className="flex flex-col md:flex-row gap-3 md:gap-5"
+              >
                 <div>
                   <span className="bg-main text-light w-12 md:w-16 h-12 md:h-16 flex justify-center items-center rounded-full text-xl md:text-2xl">
                     {item.icon}
@@ -63,7 +78,7 @@ function WhyWork() {
                     {item.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

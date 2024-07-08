@@ -1,7 +1,10 @@
+"use client";
 import { aboutPersonalInfoItems } from "../../constants";
 import { AboutPersonalInfoItem } from "./AboutPersonalInfoItem";
 import Image from "next/image";
-import Me from "../../public/images/avatar.png"
+import Me from "../../public/images/avatar.png";
+import { aboutMotion } from "@/lib/motion";
+import { motion } from "framer-motion";
 
 function About() {
   return (
@@ -13,32 +16,47 @@ function About() {
 
       <div className="container flex flex-col-reverse lg:flex-row gap-3">
         <div className="flex-1">
-          <p className="sub-title">About me</p>
+          <motion.p {...aboutMotion({ delay: 1.6 })} className="sub-title">
+            About me
+          </motion.p>
 
-          <h3 className="section-heading leading-tight mb-4">
+          <motion.h3
+            {...aboutMotion({ delay: 2 })}
+            className="section-heading leading-tight mb-4"
+          >
             Developer For You
-          </h3>
-          <p className="text-slate-600 mb-8 max-w-lg text-lg">
+          </motion.h3>
+          <motion.p
+            {...aboutMotion({ delay: 2.4 })}
+            className="text-slate-600 mb-8 max-w-lg text-lg"
+          >
             Passionate web developer and designer crafting innovative,
             functional digital experiences with precision.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-wrap flex-row gap-5 md:gap-8 mb-5 md:mb-8">
+          <motion.div
+            {...aboutMotion({ delay: .6 })}
+            className="flex flex-wrap flex-row gap-5 md:gap-8 mb-5 md:mb-8"
+          >
             {aboutPersonalInfoItems.map((item, i) => (
               <AboutPersonalInfoItem key={i} item={item} />
             ))}
-          </div>
+          </motion.div>
 
-          <a
+          <motion.a
+            {...aboutMotion({ delay: 1 })}
             target="_blank"
             href="/doc/cv.pdf"
             className="bg-main uppercase text-light py-3 px-5 rounded"
           >
             Download CV
-          </a>
+          </motion.a>
         </div>
 
-        <div className="flex-1 flex justify-center items-center">
+        <motion.div
+          {...aboutMotion({ delay: 3.6 })}
+          className="flex-1 flex justify-center items-center"
+        >
           <Image
             className="w-3/5 block m-auto rounded mb-10"
             placeholder="blur"
@@ -47,7 +65,7 @@ function About() {
             width="600"
             height="650"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
