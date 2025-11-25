@@ -111,13 +111,13 @@ export const skills = [
   { title: "Tailwind", per: "90%" },
 ];
 
+// Data
 export const aboutPersonalInfoItems = [
   { title: "Name", value: "Sahos Mia" },
   { title: "Location", value: "Bangladesh" },
   { title: "Phone", value: "01952827301" },
   { title: "Education", value: "Bsc in CSE" },
   { title: "Email", value: "sahosmia.webdev@gmail.com" },
-  // { title: "Freelance", value: "Available" },
 ];
 
 export const portfolios = [
@@ -304,7 +304,27 @@ export const socials_links = [
   { icon: <FaYoutube />, val: "https://www.youtube.com/@SahosMia" },
 ];
 
+
+export const faqs = [
+  {
+    question: "What is your web design process?",
+    answer:
+      "Our web design process begins with a discovery phase to understand your brand, goals, and target audience. We then move to wireframing, design mockups, development, and finally, deployment. We ensure you are involved and informed at every stage.",
+  },
+  {
+    question: "How long does it take to build a website?",
+    answer:
+      "The timeline for building a website varies depending on the complexity of the project. A simple brochure site might take 2-4 weeks, while a more complex e-commerce site could take 2-3 months. We provide a detailed timeline after the initial consultation.",
+  },
+  {
+    question: "Do you provide website maintenance services?",
+    answer:
+      "Yes, we offer ongoing website maintenance packages to ensure your site remains secure, up-to-date, and performs optimally. Our services include regular backups, security scans, and content updates.",
+  },
+];
+
 import HtmlInterviewQuestions from "@/public/images/posts/html-interview-questions.png";
+
 export const posts = [
   {
     title: "Html Interview Questions",

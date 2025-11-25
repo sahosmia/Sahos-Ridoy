@@ -6,69 +6,80 @@ import Me from "../../public/images/avatar.png";
 import { aboutMotion } from "@/lib/motion";
 import { motion } from "framer-motion";
 
-function About() {
-  return (
-    <section className="py-10 sm:py-16  relative" id="about">
-      <div className="absolute rounded-full w-5 h-5 bg-orange-300  top-64 left-40 -z-10"></div>
-      <div className="absolute rounded-full w-3 h-3 bg-pink-300  bottom-64 right-40 -z-10"></div>
-      <div className="absolute rounded border-2 border-red-600 w-4 md:w-10 h-4 md:h-10 bottom-96 right-96 -z-10"></div>
-      <div className="absolute rounded-full border border-teal-600 w-6 h-6 bottom-2 right-2/3 -z-10"></div>
 
-      <div className="container flex flex-col-reverse lg:flex-row gap-3">
+export default function About() {
+  return (
+    <section id="about" className="py-16 relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
+      {/* Decorative shapes */}
+      <div className="absolute w-8 h-8 bg-orange-300/40 rounded-full top-40 left-20 blur-2xl"></div>
+      <div className="absolute w-6 h-6 bg-pink-300/40 rounded-full bottom-40 right-20 blur-xl"></div>
+      <div className="absolute w-10 h-10 border-2 border-red-400 rounded-xl bottom-72 right-72 rotate-45"></div>
+      <div className="absolute w-6 h-6 border border-teal-500/40 rounded-full bottom-10 right-1/2"></div>
+
+
+      <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-10">
+        {/* Left Content */}
         <div className="flex-1">
-          <motion.p {...aboutMotion({ delay: 1.6 })} className="sub-title">
+          <motion.p {...aboutMotion({ delay: 0.2 })} className="text-main font-semibold tracking-wide uppercase mb-2">
             About me
           </motion.p>
 
+
           <motion.h3
-            {...aboutMotion({ delay: 2 })}
-            className="section-heading leading-tight mb-4"
+            {...aboutMotion({ delay: 0.4 })}
+            className="text-4xl lg:text-5xl font-bold leading-tight text-slate-900 mb-6"
           >
             Developer For You
           </motion.h3>
+
+
           <motion.p
-            {...aboutMotion({ delay: 2.4 })}
-            className="text-slate-600 mb-8 max-w-lg text-lg"
+            {...aboutMotion({ delay: 0.6 })}
+            className="text-slate-600 max-w-xl text-lg mb-8"
           >
-            Passionate web developer and designer crafting innovative,
-            functional digital experiences with precision.
+            Passionate web developer and designer crafting innovative, functional digital experiences with precision.
           </motion.p>
 
+
+          {/* Personal info grid */}
           <motion.div
-            {...aboutMotion({ delay: .6 })}
-            className="flex flex-wrap flex-row gap-5 md:gap-8 mb-5 md:mb-8"
+            {...aboutMotion({ delay: 0.8 })}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8"
           >
             {aboutPersonalInfoItems.map((item, i) => (
               <AboutPersonalInfoItem key={i} item={item} />
             ))}
           </motion.div>
 
+
+          {/* Button */}
           <motion.a
             {...aboutMotion({ delay: 1 })}
-            target="_blank"
             href="/doc/cv.pdf"
-            className="bg-main uppercase text-light py-3 px-5 rounded"
+            target="_blank"
+            className="inline-block bg-main text-white font-semibold tracking-wide px-6 py-3 rounded-xl shadow hover:shadow-lg hover:bg-main/90 transition-all"
           >
             Download CV
           </motion.a>
         </div>
 
+
+        {/* Right Image */}
         <motion.div
-          {...aboutMotion({ delay: 3.6 })}
+          {...aboutMotion({ delay: 1.2 })}
           className="flex-1 flex justify-center items-center"
         >
-          <Image
-            className="w-3/5 block m-auto rounded mb-10"
-            placeholder="blur"
-            src={Me}
-            alt="Sahos Mia"
-            width="600"
-            height="650"
-          />
+          <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[380px] lg:h-[380px] rounded overflow-hidden shadow-xl ring-4 ring-white">
+            <Image
+              src={Me}
+              alt="Sahos Mia"
+              fill
+              placeholder="blur"
+              className="object-cover"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
   );
 }
-
-export default About;

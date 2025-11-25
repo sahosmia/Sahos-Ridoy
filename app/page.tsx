@@ -5,6 +5,7 @@ import MyWork from "../components/home/MyWork";
 import ProjectTogether from "../components/home/ProjectTogether";
 import Service from "../components/home/Service";
 import Skills from "../components/home/Skills";
+import Faq from "../components/home/Faq";
 import Target from "../components/home/Target";
 import WhyWork from "../components/home/WhyWork";
 
@@ -25,6 +26,7 @@ export default function Home() {
       <MyWork/>
       <Target />
       <WhyWork />
+      <Faq />
       <ProjectTogether />
     </main>
   );
