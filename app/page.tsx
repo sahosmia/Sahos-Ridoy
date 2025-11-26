@@ -9,6 +9,7 @@ import Faq from "../components/home/Faq";
 import Target from "../components/home/Target";
 import WhyWork from "../components/home/WhyWork";
 import WhatsAppButton from "@/components/home/WhatsAppButton";
+import EduExperience from "@/components/home/EduExperience";
 
 export const metadata: Metadata = {
   title: "Home Page",
@@ -22,14 +23,15 @@ export default function Home() {
     <main>
       <Hero />
       <About />
-      <Skills />
-      <Service />
-      <MyWork/>
+      <EduExperience />
+      {/* <Skills /> */}
       <Target />
+      <Service />
+      <MyWork />
       <WhyWork />
       <Faq />
       <ProjectTogether />
-      <WhatsAppButton/>
+      <WhatsAppButton />
     </main>
   );
 }
