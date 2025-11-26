@@ -8,6 +8,7 @@ import Skills from "../components/home/Skills";
 import Faq from "../components/home/Faq";
 import Target from "../components/home/Target";
 import WhyWork from "../components/home/WhyWork";
+import WhatsAppButton from "@/components/home/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Home Page",
@@ -28,6 +29,7 @@ export default function Home() {
       <WhyWork />
       <Faq />
       <ProjectTogether />
+      <WhatsAppButton/>
     </main>
   );
 }
