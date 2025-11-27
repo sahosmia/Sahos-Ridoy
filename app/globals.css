@@ -10,3 +10,19 @@
   @apply text-main text-sm md:text-base font-bold uppercase mb-2 md:mb-4;
 }
 
+
+
+   .custom-scrollbar::-webkit-scrollbar {
+    width: 4px; /* Set the width of the scrollbar */
+  }
+
+ 
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-800 rounded-full; /* Style the thumb */
+
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-main; /* Add hover effect */
+  }

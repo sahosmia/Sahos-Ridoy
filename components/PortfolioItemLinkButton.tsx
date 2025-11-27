@@ -1,14 +1,21 @@
-"use client"
-import { redirect } from "next/navigation";
+"use client";
+import { useRouter } from "next/navigation";
 
 const PortfolioItemLinkButton = ({ slug }: { slug: string }) => {
+  const router = useRouter();
+
   return (
     <button
-      onClick={() => {
-        redirect(`portfolio/${slug}`);
-      }}
+      onClick={() => router.push(`/portfolios/${slug}`)}
       type="button"
-      className="mt-4  text-main  hover:text-opacity-80 transition-all text-sm md:text-base font-medium rounded inline-block underline"
+      className="
+        mt-4 text-main underline 
+        hover:text-opacity-80 
+        transition-all 
+        text-sm md:text-base 
+        font-medium 
+        rounded inline-block
+      "
     >
       View details
     </button>
