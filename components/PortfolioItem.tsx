@@ -83,7 +83,7 @@ const PortfolioItem = ({ item }) => {
         <div className="p-6">
           <h5
             className="
-              text-white text-lg md:text-xl font-semibold 
+               text-lg md:text-xl font-semibold 
               mb-2 line-clamp-2 
               transition-all duration-300
               group-hover:text-main

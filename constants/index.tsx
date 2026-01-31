@@ -15,7 +15,7 @@ export const menus = [
   },
 
   {
-    title: "Protfolios",
+    title: "Portfolios",
     link: "/portfolios",
   },
   {

@@ -21,7 +21,7 @@ export default function RootLayout({ children, parallel }) {
         {parallel}
         <div id="portal-root" />
 
-        <Contact />
+        {/* <Contact /> */}
         <Footer />
       </body>
     </html>

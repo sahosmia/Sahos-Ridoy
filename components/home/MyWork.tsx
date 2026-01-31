@@ -15,7 +15,7 @@ function MyWork() {
   return (
     <section
       className="py-10 sm:py-16  relative overflow-hidden z-10"
-      id="protfolio"
+      id="portfolio"
     >
       <SectionHead title="My Work" des="I try to satisfy client by my work" />
 

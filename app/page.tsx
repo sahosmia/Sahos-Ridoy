@@ -22,15 +22,15 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Target />
       <About />
       <EduExperience />
       {/* <Skills /> */}
-      <Target />
-      <Service />
       <MyWork />
+      <Service />
       <WhyWork />
-      <Faq />
       <ProjectTogether />
+      <Faq />
       <WhatsAppButton />
     </main>
   );

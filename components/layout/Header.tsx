@@ -1,7 +1,11 @@
+"use client";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { menus } from "../../constants";
 
 function Header() {
+  const router = useRouter();
+
   return (
     <header className="absolute top-0 left-0 right-0 z-20">
       <nav className="container relative flex justify-between items-center h-20">
@@ -24,8 +28,11 @@ function Header() {
               </li>
             ))}
 
-            <button className="bg-main text-light rounded-full px-5 py-2">
-              Hiar Me
+            <button
+              onClick={() => router.push("/contact")}
+              className="bg-main text-light rounded-full px-5 py-2 hover:bg-main/90 transition"
+            >
+              Hire Me
             </button>
           </ul>
         </div>
