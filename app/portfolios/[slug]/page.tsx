@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import PageBannerTitle from "../../../components/core/PageBannerTitle";
-import { portfolios } from "../../../constants/index";
+import PageBannerTitle from "@/components/core/PageBannerTitle";
+import { portfolios } from "@/data/portfolios";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PortfolioItemDetails from "@/components/PortfolioItemDetails";

@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@tailwindcss/typography": "^0.5.19",
     "dompurify": "^3.1.5",
     "framer-motion": "^11.2.13",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.555.0",
     "next": "14.0.4",
+    "next-mdx-remote": "^6.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",

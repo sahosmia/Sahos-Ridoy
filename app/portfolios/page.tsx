@@ -1,6 +1,6 @@
-import PageBannerTitle from "../../components/core/PageBannerTitle"
-import { portfolios } from "../../constants";
-import PortfolioItem from "../../components/PortfolioItem"
+import PageBannerTitle from "@/components/core/PageBannerTitle"
+import { portfolios } from "@/data/portfolios";
+import PortfolioItem from "@/components/PortfolioItem"
 import { Metadata } from "next";
 
 

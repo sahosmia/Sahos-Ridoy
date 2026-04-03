@@ -14,7 +14,6 @@ const PostItem = ({ item }) => {
           src={item.thumbnail}
           alt={item.title}
           fill
-          placeholder="blur"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
@@ -23,7 +22,7 @@ const PostItem = ({ item }) => {
           {item.title}
         </h5>
         <div className="pt-2 md:pt-4 text-gray-500 line-clamp-3">
-          <div dangerouslySetInnerHTML={{ __html: item.content }}></div>
+          <p>{item.description}</p>
         </div>
       </div>
     </Link>

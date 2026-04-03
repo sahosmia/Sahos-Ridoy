@@ -1,0 +1,40 @@
+
+> sahos-mia@0.1.0 dev
+> next dev
+
+   ▲ Next.js 14.0.4
+   - Local:        http://localhost:3000
+
+ ✓ Ready in 2.1s
+ ○ Compiling / ...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ✓ Compiled / in 22.1s (1276 modules)
+ ✓ Compiled in 4.7s (611 modules)
+ ⨯ upstream image response failed for /images/portfolio/login.png ResponseAborted
+    at ServerResponse.<anonymous> (/app/node_modules/next/dist/server/web/spec-extension/adapters/next-request.js:52:26)
+    at Object.onceWrapper (node:events:633:28)
+    at ServerResponse.emit (node:events:531:35)
+    at emitCloseNT (node:_http_server:1066:10)
+    at Socket.onServerResponseClose (node:_http_server:285:5)
+    at Socket.emit (node:events:531:35)
+    at TCP.<anonymous> (node:net:346:12)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)
+ ○ Compiling /portfolios ...
+ ✓ Compiled /portfolios in 1595ms (1258 modules)
+ ○ Compiling /(.)portfolios/[slug] ...
+ ✓ Compiled /(.)portfolios/[slug] in 2.2s (1301 modules)
+ ○ Compiling /posts ...
+ ✓ Compiled /posts in 2.2s (1353 modules)
+ ○ Compiling /posts/[slug] ...
+ ✓ Compiled /posts/[slug] in 732ms (1372 modules)
+ ⨯ upstream image response failed for /_next/static/media/nirapad.d7e597bd.png ResponseAborted
+    at ServerResponse.<anonymous> (/app/node_modules/next/dist/server/web/spec-extension/adapters/next-request.js:52:26)
+    at Object.onceWrapper (node:events:633:28)
+    at ServerResponse.emit (node:events:531:35)
+    at emitCloseNT (node:_http_server:1066:10)
+    at Socket.onServerResponseClose (node:_http_server:285:5)
+    at Socket.emit (node:events:531:35)
+    at TCP.<anonymous> (node:net:346:12)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)

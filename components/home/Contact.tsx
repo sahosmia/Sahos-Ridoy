@@ -1,5 +1,5 @@
 
-import { contacts } from "../../constants";
+import { contacts } from "@/data/others";
 import ContactForm from "./ContactForm";
 import ContactSocialItem from "./ContactSocialItem";
 

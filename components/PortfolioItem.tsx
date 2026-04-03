@@ -48,7 +48,6 @@ const PortfolioItem = ({ item }) => {
               transition-transform duration-700
               group-hover:scale-110
             "
-            placeholder="blur"
             sizes="100vw"
           />
 

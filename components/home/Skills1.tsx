@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
-import FaqSide from "../../public/images/faq2.jpg";
-import { skills } from "../../constants";
+import { skills } from "@/data/skills";
 import { skillImageMotion, skillMotion } from "@/lib/motion";
 import { motion } from "framer-motion";
 
@@ -15,10 +14,9 @@ const Skills = () => {
         >
           <Image
             className="w-4/5 flex m-auto"
-            src={FaqSide}
+            src="/images/faq2.jpg"
             alt="Faq - Sahos"
             fill
-            placeholder="blur"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </motion.div>

@@ -1,8 +1,7 @@
 "use client";
-import { aboutPersonalInfoItems } from "../../constants";
+import { aboutPersonalInfoItems } from "@/data/others";
 import { AboutPersonalInfoItem } from "./AboutPersonalInfoItem";
 import Image from "next/image";
-import Me from "../../public/images/avatar.png";
 import { aboutMotion } from "@/lib/motion";
 import { motion } from "framer-motion";
 
@@ -71,10 +70,9 @@ export default function About() {
         >
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[380px] lg:h-[380px] rounded overflow-hidden shadow-xl ring-4 ring-white">
             <Image
-              src={Me}
+              src="/images/avatar.png"
               alt="Sahos Mia"
               fill
-              placeholder="blur"
               className="object-cover"
             />
           </div>

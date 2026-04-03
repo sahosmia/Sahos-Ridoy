@@ -1,4 +1,4 @@
-import { faqs } from "@/constants";
+import { faqs } from "@/data/others";
 import FaqItem from "./FaqItem";
 import SectionHead from "./SectionHead";
 

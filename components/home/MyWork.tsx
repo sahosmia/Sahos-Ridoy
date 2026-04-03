@@ -1,7 +1,7 @@
 import Image from "next/image";
 import SectionHead from "./SectionHead";
 import PortfolioItem from "../PortfolioItem";
-import { portfolios } from "../../constants";
+import { portfolios } from "@/data/portfolios";
 
 function MyWork() {
   const showPortfolios = portfolios.filter((item) => item.showStatus === true);

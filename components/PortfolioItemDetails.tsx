@@ -14,7 +14,6 @@ const PortfolioItemDetails = ({ portfolio }) => {
           width={1200}
           height={400}
           priority
-          placeholder="blur"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
