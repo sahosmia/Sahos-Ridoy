@@ -14,7 +14,7 @@ export default function RootLayout({
   parallel
 }: {
   children: React.ReactNode;
-  parallel?: React.ReactNode;
+  parallel: React.ReactNode;
 }) {
   return (
     <html lang="en">
