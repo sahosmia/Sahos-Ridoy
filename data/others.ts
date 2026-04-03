@@ -107,3 +107,51 @@ export const faqs: Faq[] = [
       "Yes, we offer ongoing website maintenance packages to ensure your site remains secure, up-to-date, and performs optimally. Our services include regular backups, security scans, and content updates.",
   },
 ];
+
+export interface ExperienceItem {
+  company: string;
+  role: string;
+  period: string;
+  description: string;
+}
+
+export const experiences: ExperienceItem[] = [
+  {
+    company: "i'Social Limited",
+    role: "Junior Application Developer",
+    period: "Jan 2022 to Jan 2023",
+    description: "Worked on web apps, bug fixing, features, API integration & backend maintenance.",
+  },
+  {
+    company: "Code 24",
+    role: "Laravel Application Developer",
+    period: "Jan 2025 to July 2025",
+    description: "Built full-stack apps, optimized performance, improved UI/UX & worked on deployments.",
+  },
+  {
+    company: "AgainSoft",
+    role: "Laravel Developer",
+    period: "Aug 2025 to Present",
+    description: "Building scalable apps, API architecture, admin dashboard, system maintenance & optimization.",
+  },
+];
+
+export interface SkillCategory {
+  title: string;
+  description: string;
+}
+
+export const skillCategories: SkillCategory[] = [
+  {
+    title: "Backend Development",
+    description: "Laravel, REST APIs, authentication, database design, queues, optimized backend architecture & clean code structure.",
+  },
+  {
+    title: "Frontend Development",
+    description: "React, Next.js, Tailwind CSS, UI animation, responsive design, reusable components & performance optimization.",
+  },
+  {
+    title: "Tools & DevOps",
+    description: "Git, GitHub Actions, Docker basics, server deployment, Nginx, CI/CD pipelines & environment management.",
+  },
+];

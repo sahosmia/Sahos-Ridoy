@@ -11,21 +11,62 @@ module.exports = {
         primary: {
           DEFAULT: "#fe4e59",
           dark: "#e33e48",
+          light: "#ff7a81",
         },
-        secondary: "#1d1831",
+        secondary: {
+          DEFAULT: "#1d1831",
+          light: "#2d264a",
+          dark: "#141024",
+        },
         accent: {
-          orange: "#F75023",
-          "orange-light": "#FEDFD7",
-          green: "#1CBE59",
-          "green-light": "#DDF5E6",
-          purple: "#836AF0",
-          "purple-light": "#ECE8FD",
+          orange: {
+            DEFAULT: "#F75023",
+            light: "#FEDFD7",
+          },
+          green: {
+            DEFAULT: "#1CBE59",
+            light: "#DDF5E6",
+          },
+          purple: {
+            DEFAULT: "#836AF0",
+            light: "#ECE8FD",
+          },
+        },
+        surface: {
+          DEFAULT: "#0A0A0A",
+          muted: "#171717",
+          border: "#262626",
+        },
+        text: {
+          primary: "#ffffff",
+          secondary: "#94a3b8", // slate-400
+          muted: "#64748b",      // slate-500
         },
         dark: "#0A0A0A",
         "social-upwork": "#14A800",
         "social-upwork-dark": "#0F8A00",
         light: "#ffffff",
       },
+
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme("colors.text.secondary"),
+            h1: { color: theme("colors.text.primary") },
+            h2: { color: theme("colors.text.primary") },
+            h3: { color: theme("colors.text.primary") },
+            h4: { color: theme("colors.text.primary") },
+            strong: { color: theme("colors.text.primary") },
+            a: {
+              color: theme("colors.primary.DEFAULT"),
+              "&:hover": {
+                color: theme("colors.primary.dark"),
+              },
+            },
+            code: { color: theme("colors.primary.light") },
+          },
+        },
+      }),
 
       backgroundImage: {
         "hero-pattern": "url('/images/hero.jpg')",
