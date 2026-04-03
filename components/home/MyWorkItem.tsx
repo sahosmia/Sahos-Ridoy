@@ -35,7 +35,7 @@ export default function MyWorkItem({ item, index }) {
         <div className="hidden md:block mt-6 md:mt-8 mb-4">
           <Link
             href={`/portfolio/${slug}`}
-            className="px-4 py-2 bg-main hover:bg-opacity-80 duration-500 text-sm md:text-base font-medium text-light rounded inline"
+            className="px-4 py-2 bg-primary hover:bg-opacity-80 duration-500 text-sm md:text-base font-medium text-light rounded inline"
           >
             Details
           </Link>

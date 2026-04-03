@@ -9,7 +9,7 @@ const PortfolioItemLinkButton = ({ slug }: { slug: string }) => {
       onClick={() => router.push(`/portfolios/${slug}`)}
       type="button"
       className="
-        mt-4 text-main underline 
+        mt-4 text-primary underline
         hover:text-opacity-80 
         transition-all 
         text-sm md:text-base 

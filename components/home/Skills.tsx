@@ -72,7 +72,7 @@ const Skills: React.FC = () => {
                     src={FaqSide}
                     alt="Skills Illustration - Sahos"
                     fill
-                    style={{ objectFit: "cover" }}
+                    className="object-cover"
                     placeholder="blur"
                   />
                 </motion.div>

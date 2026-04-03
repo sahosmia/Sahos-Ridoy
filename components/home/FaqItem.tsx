@@ -36,7 +36,7 @@ const FaqItem = ({
                         duration: 0.6,
                         ease: "easeInOut",
                     }}
-                    className="text-main text-2xl"
+                    className="text-primary text-2xl"
                 >
                     {isOpen ? <FaMinus /> : <FaPlus />}
                 </motion.div>

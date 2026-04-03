@@ -39,8 +39,7 @@ export interface Contact {
   title: string;
   val: string;
   icon: string;
-  color: string;
-  bg: string;
+  variant: "orange" | "green" | "purple";
 }
 
 export const contacts: Contact[] = [
@@ -48,22 +47,19 @@ export const contacts: Contact[] = [
     title: "Location",
     val: "Chuadanga, Bangladesh",
     icon: "FaMap",
-    color: "#F75023",
-    bg: "#FEDFD7",
+    variant: "orange",
   },
   {
     title: "Phone",
     val: "01952827301",
     icon: "ImPhone",
-    color: "#1CBE59",
-    bg: "#DDF5E6",
+    variant: "green",
   },
   {
     title: "Email",
     val: "sahosmia.webdev@gmail.com",
     icon: "FaEnvelope",
-    color: "#836AF0",
-    bg: "#ECE8FD",
+    variant: "purple",
   },
 ];
 

@@ -19,7 +19,7 @@ const cardVariants = {
 
 function Target() {
   return (
-    <section className="py-16 relative">
+    <section className="section relative">
       <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {targets.map((item, i) => (
           <motion.div
@@ -31,7 +31,7 @@ function Target() {
             variants={cardVariants}
             className="
               group p-8 rounded-3xl 
-              bg-[#1d1831] backdrop-blur-xl
+              bg-secondary backdrop-blur-xl
               border border-white/20 
               shadow-[0_8px_30px_rgb(0,0,0,0.12)]
               hover:shadow-[0_8px_45px_rgba(0,0,0,0.2)]
@@ -43,8 +43,8 @@ function Target() {
               className="
                 w-16 h-16 flex items-center justify-center 
                 rounded-2xl 
-                bg-gradient-to-br from-main/20 to-main/5 
-                text-main text-4xl
+                bg-gradient-to-br from-primary/20 to-primary/5
+                text-primary text-4xl
                 mb-6 
                 group-hover:scale-110 
                 transition-all duration-500
@@ -58,7 +58,7 @@ function Target() {
               className="
                 text-white text-xl md:text-2xl font-semibold 
                 mb-3 
-                group-hover:text-main 
+                group-hover:text-primary
                 transition-colors duration-300
               "
             >

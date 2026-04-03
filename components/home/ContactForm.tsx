@@ -4,7 +4,7 @@
 
 const ContactForm = () => {
   let inputClass =
-    "w-full lg  :w-1/2 py-2 md:py-4 px-2 md:px-3 text-sm md:text-base outline outline-1 outline-slate-300 focus:outline-main focus:outline-1 rounded";
+    "w-full lg  :w-1/2 py-2 md:py-4 px-2 md:px-3 text-sm md:text-base outline outline-1 outline-slate-300 focus:outline-primary focus:outline-1 rounded";
 
   // const form = useRef();
   // const sendEmail = (e) => {
@@ -73,15 +73,15 @@ const ContactForm = () => {
             <textarea
               rows={5}
               name="message"
-              placeholder="Write Your Massage Here"
-              className="w-full py-2 md:py-4 px-2 md:px-3 text-sm md:text-base outline outline-1 outline-slate-300 focus:outline-main focus:outline-1 rounded "
+              placeholder="Write Your Message Here"
+              className="w-full py-2 md:py-4 px-2 md:px-3 text-sm md:text-base outline outline-1 outline-slate-300 focus:outline-primary focus:outline-1 rounded "
               required
             ></textarea>
           </div>
           <div>
             <button
               type="submit"
-              className="shadow bg-main btn text-light rounded-full px-10 md:px-14 py-2 md:py-4 w-full sm:w-auto"
+              className="shadow bg-primary btn text-light rounded-full px-10 md:px-14 py-2 md:py-4 w-full sm:w-auto"
             >
               Send Message
             </button>

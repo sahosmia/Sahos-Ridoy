@@ -1,12 +1,18 @@
 import DynamicIcon from "../core/DynamicIcon";
 
+const colorMap = {
+  orange: "text-accent-orange bg-accent-orange-light",
+  green: "text-accent-green bg-accent-green-light",
+  purple: "text-accent-purple bg-accent-purple-light",
+};
+
 export default function ContactSocialItem({ contact }) {
-  const { bg, color, icon, title, val } = contact;
+  const { variant, icon, title, val } = contact;
+
   return (
     <div className="flex items-center gap-2 md:gap-5">
       <span
-        style={{ color, background: bg }}
-        className={`flex justify-center items-center   text-md md:text-xl w-12 md:w-16 lg:w-20 h-12 md:h-16 lg:h-20 rounded-full`}
+        className={`flex justify-center items-center text-md md:text-xl w-12 md:w-16 lg:w-20 h-12 md:h-16 lg:h-20 rounded-full ${colorMap[variant as keyof typeof colorMap] || ""}`}
       >
         <DynamicIcon name={icon} />
       </span>
