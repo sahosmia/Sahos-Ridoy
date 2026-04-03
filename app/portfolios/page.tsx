@@ -5,8 +5,8 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "Portfolios Page",
-  description: "Sahos mia is a profetional web developer",
+  title: "Portfolio | Web Development Projects",
+  description: "Explore the latest web development projects and designs by Sahos Mia.",
 };
 
 
@@ -14,7 +14,7 @@ const Portfolios = () => {
   return (
     <>
       <PageBannerTitle
-        title="Portfolio Page"
+        title="My Portfolio"
         img="/images/portfolio/portfolio-background.jpg"
       />
 

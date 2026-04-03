@@ -6,8 +6,8 @@ import { getSortedPostsData } from "@/lib/mdx";
 
 
 export const metadata: Metadata = {
-  title: "Posts Page",
-  description: "Sahos mia is a profetional web developer",
+  title: "Blog | Insights & Tutorials",
+  description: "Read the latest articles on web development, React, and technology by Sahos Mia.",
 };
 
 
