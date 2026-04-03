@@ -17,7 +17,7 @@ const PostItemDetails = ({ post, mdxSource }: { post: any; mdxSource: any }) => 
         />
       </div>
 
-      <div className="w-full pb-4 post-content prose prose-invert max-w-none text-slate-300">
+      <div className="w-full pb-8 post-content prose prose-invert max-w-none">
         <MDXRemote source={post.content} />
       </div>
       <ShareButtons slug={post.slug} />

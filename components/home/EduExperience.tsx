@@ -18,7 +18,7 @@ const EduExperience: FC = () => {
                     <h2 className="text-3xl font-bold mb-8">Skills</h2>
 
                     <div className="bg-slate-900  ">
-                        
+
                         {/* ITEM */}
                         <div className="relative border-l-2 border-primary border-b border-b-slate-700 p-6 pl-10">
                             {/* Pointer */}
@@ -28,7 +28,7 @@ const EduExperience: FC = () => {
                             <div className="h-40 overflow-y-auto custom-scrollbar">
                                 <h3 className="text-xl font-semibold">Backend Development</h3>
                                 <p className="text-sm opacity-70 mt-3 leading-relaxed">
-                                    Laravel, REST APIs, authentication, database design, queues, 
+                                    Laravel, REST APIs, authentication, database design, queues,
                                     optimized backend architecture & clean code structure.
                                 </p>
                             </div>
@@ -42,7 +42,7 @@ const EduExperience: FC = () => {
                             <div className="h-40 overflow-y-auto custom-scrollbar">
                                 <h3 className="text-xl font-semibold">Frontend Development</h3>
                                 <p className="text-sm opacity-70 mt-3 leading-relaxed">
-                                    React, Next.js, Tailwind CSS, UI animation, responsive design, 
+                                    React, Next.js, Tailwind CSS, UI animation, responsive design,
                                     reusable components & performance optimization.
                                 </p>
                             </div>
@@ -56,7 +56,7 @@ const EduExperience: FC = () => {
                             <div className="h-40 overflow-y-auto custom-scrollbar">
                                 <h3 className="text-xl font-semibold">Tools & DevOps</h3>
                                 <p className="text-sm opacity-70 mt-3 leading-relaxed">
-                                    Git, GitHub Actions, Docker basics, server deployment, Nginx, 
+                                    Git, GitHub Actions, Docker basics, server deployment, Nginx,
                                     CI/CD pipelines & environment management.
                                 </p>
                             </div>
