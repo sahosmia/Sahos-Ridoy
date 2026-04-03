@@ -1,7 +1,8 @@
 "use client";
 
-import { targets } from "../../constants";
+import { targets } from "@/data/services";
 import { motion } from "framer-motion";
+import DynamicIcon from "../core/DynamicIcon";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 25 },
@@ -49,7 +50,7 @@ function Target() {
                 transition-all duration-500
               "
             >
-              {item.icon}
+              <DynamicIcon name={item.icon} />
             </div>
 
             {/* Title */}

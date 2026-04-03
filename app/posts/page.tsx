@@ -1,7 +1,7 @@
-import { posts } from "../../constants";
 import { Metadata } from "next";
 import PageBannerTitle from "@/components/core/PageBannerTitle";
 import PostItem from "@/components/posts/PostItem";
+import { getSortedPostsData } from "@/lib/mdx";
 
 
 
@@ -12,6 +12,8 @@ export const metadata: Metadata = {
 
 
 export default function Home() {
+  const posts = getSortedPostsData();
+
   return (
     <>
       <PageBannerTitle

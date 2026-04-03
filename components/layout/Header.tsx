@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { menus } from "../../constants";
+import { menus } from "@/data/menus";
 
 function Header() {
   const router = useRouter();

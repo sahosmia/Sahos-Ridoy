@@ -1,7 +1,8 @@
 "use client";
-import { services } from "../../constants";
+import { services } from "@/data/services";
 import SectionHead from "./SectionHead";
 import { motion } from "framer-motion";
+import DynamicIcon from "../core/DynamicIcon";
 import { serviceMotion } from "@/lib/motion";
 
 function Service() {
@@ -43,7 +44,7 @@ function Service() {
                 border border-white/10 mx-auto mb-6
               "
             >
-              {item.icon}
+              <DynamicIcon name={item.icon} />
             </div>
 
             <h4 className="text-white text-xl font-semibold text-center mb-3">
