@@ -11,7 +11,7 @@ const Hero = () => {
         {/* Small intro */}
         <motion.h4
           {...heroMotion({ delay: 0 })}
-          className="text-2xl md:text-4xl font-medium text-main"
+          className="text-2xl md:text-4xl font-medium text-primary"
         >
           Hello, I am
         </motion.h4>
@@ -40,14 +40,14 @@ const Hero = () => {
         >
           <Link
             href="/portfolios"
-            className="bg-main text-light px-6 py-3 rounded-full font-medium hover:bg-main/90 shadow-md transition"
+            className="btn btn-primary"
           >
             Portfolio
           </Link>
 
           <Link
             href="#about"
-            className="px-6 py-3 rounded-full font-medium border border-main text-main hover:bg-main hover:text-light transition"
+            className="btn btn-outline"
           >
             About
           </Link>

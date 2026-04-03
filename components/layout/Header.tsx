@@ -11,8 +11,8 @@ function Header() {
       <nav className="container relative flex justify-between items-center h-20">
         <div>
           <Link href="/" className="text-light text-xl font-semibold">
-            <span className="text-main">S</span>Ridoy
-            <span className="text-main">.</span>
+            <span className="text-primary">S</span>Ridoy
+            <span className="text-primary">.</span>
           </Link>
         </div>
         <div className="hidden md:flex">
@@ -21,7 +21,7 @@ function Header() {
               <li key={item.title}>
                 <Link
                   href={item.link}
-                  className="text-light font-medium text-sm hover:text-main transition ease-in-out duration-300"
+                  className="text-light font-medium text-sm hover:text-primary transition ease-in-out duration-300"
                 >
                   {item.title}
                 </Link>
@@ -30,7 +30,7 @@ function Header() {
 
             <button
               onClick={() => router.push("/contact")}
-              className="bg-main text-light rounded-full px-5 py-2 hover:bg-main/90 transition"
+              className="bg-primary text-light rounded-full px-5 py-2 hover:bg-primary/90 transition"
             >
               Hire Me
             </button>
@@ -48,17 +48,17 @@ function Header() {
           <li>
             <Link
               href="/"
-              className="text-light font-medium text-sm hover:text-main transition ease-in-out duration-300"
+              className="text-light font-medium text-sm hover:text-primary transition ease-in-out duration-300"
             >
               Home
             </Link>
           </li>
 
-          <button className="bg-main text-light rounded-full px-5 py-2">
-            Hiar Me
+          <button className="bg-primary text-light rounded-full px-5 py-2">
+            Hire Me
           </button>
 
-          <span id="cross-main" className="text-light absolute top-5 right-5">
+          <span id="cross-primary" className="text-light absolute top-5 right-5">
             <i className="fa-solid fa-x"></i>
           </span>
         </ul>

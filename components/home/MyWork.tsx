@@ -1,29 +1,55 @@
+"use client";
 import Image from "next/image";
 import SectionHead from "./SectionHead";
 import PortfolioItem from "../PortfolioItem";
 import { portfolios } from "@/data/portfolios";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function MyWork() {
   const showPortfolios = portfolios.filter((item) => item.showStatus === true);
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   };
+
   return (
     <section
-      className="py-10 sm:py-16  relative overflow-hidden z-10"
+      className="section relative overflow-hidden z-10"
       id="portfolio"
     >
       <SectionHead title="My Work" des="I try to satisfy client by my work" />
 
-      <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-8 ">
-        {showPortfolios.map(
-          (item) =>
-            item.showStatus && <PortfolioItem key={item.slug} item={item} />
-        )}
+      <div className="container-custom">
+        <Slider {...settings} className="portfolio-slider">
+          {showPortfolios.map(
+            (item) =>
+              item.showStatus && (
+                <div key={item.slug} className="px-4">
+                  <PortfolioItem item={item} />
+                </div>
+              )
+          )}
+        </Slider>
       </div>
 
       <Image
@@ -33,8 +59,6 @@ function MyWork() {
         width="100"
         height="100"
       />
-
-      {/* <div className="circle absolute w-96 h-96 top-1/2 -right-60  rounded-full -translate-y-1/2 -z-10"></div> */}
     </section>
   );
 }

@@ -16,14 +16,7 @@ const PortfolioItem = ({ item }) => {
     >
       <Link
         href={`/portfolios/${item.slug}`}
-        className="
-          group relative block rounded-3xl overflow-hidden 
-          bg-white/[0.05] backdrop-blur-xl
-          border border-white/10 
-          transition-all duration-500
-          hover:border-white/20
-          hover:shadow-[0_0_25px_rgba(255,255,255,0.15)]
-        "
+        className="group relative block card-portfolio"
       >
         {/* Animated border glow */}
         <div
@@ -85,7 +78,7 @@ const PortfolioItem = ({ item }) => {
                text-lg md:text-xl font-semibold 
               mb-2 line-clamp-2 
               transition-all duration-300
-              group-hover:text-main
+              group-hover:text-primary
             "
           >
             {item.title}

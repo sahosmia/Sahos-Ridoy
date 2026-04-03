@@ -33,9 +33,9 @@ const Skills = () => {
                   <span className="font-medium">{skill.per}</span>
                 </div>
                 <div className="bg-gray-200   rounded">
-                  <div className=" " style={{ width: `${skill.per}` }}>
+                  <div className=" " style={{ width: skill.per }}>
                     <div
-                      className={`bg-main py-1 w-full rounded skill-bar `}
+                      className={`bg-primary py-1 w-full rounded skill-bar `}
                     ></div>
                   </div>
                 </div>

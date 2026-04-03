@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const EduExperience: FC = () => {
     return (
-        <section className="w-full py-20 bg-[#0A0A0A] text-white">
+        <section className="w-full py-20 bg-dark text-white">
             <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-20">
 
                 {/* ======================= SKILLS ======================= */}
@@ -20,10 +20,10 @@ const EduExperience: FC = () => {
                     <div className="bg-slate-900  ">
                         
                         {/* ITEM */}
-                        <div className="relative border-l-2 border-main border-b border-b-slate-700 p-6 pl-10">
+                        <div className="relative border-l-2 border-primary border-b border-b-slate-700 p-6 pl-10">
                             {/* Pointer */}
-                            <div className="absolute -left-3 top-8 w-6 h-4 bg-main rounded-r-sm"></div>
-                            <div className="absolute left-3 top-8 border-8 border-transparent border-l-main"></div>
+                            <div className="absolute -left-3 top-8 w-6 h-4 bg-primary rounded-r-sm"></div>
+                            <div className="absolute left-3 top-8 border-8 border-transparent border-l-primary"></div>
 
                             <div className="h-40 overflow-y-auto custom-scrollbar">
                                 <h3 className="text-xl font-semibold">Backend Development</h3>
@@ -35,9 +35,9 @@ const EduExperience: FC = () => {
                         </div>
 
                         {/* ITEM */}
-                        <div className="relative border-l-2 border-main border-b border-b-slate-700 p-6 pl-10">
-                            <div className="absolute -left-3 top-8 w-6 h-4 bg-main rounded-r-sm"></div>
-                            <div className="absolute left-3 top-8 border-8 border-transparent border-l-main"></div>
+                        <div className="relative border-l-2 border-primary border-b border-b-slate-700 p-6 pl-10">
+                            <div className="absolute -left-3 top-8 w-6 h-4 bg-primary rounded-r-sm"></div>
+                            <div className="absolute left-3 top-8 border-8 border-transparent border-l-primary"></div>
 
                             <div className="h-40 overflow-y-auto custom-scrollbar">
                                 <h3 className="text-xl font-semibold">Frontend Development</h3>
@@ -49,9 +49,9 @@ const EduExperience: FC = () => {
                         </div>
 
                         {/* ITEM */}
-                        <div className="relative border-l-2 border-main p-6 pl-10">
-                            <div className="absolute -left-3 top-8 w-6 h-4 bg-main rounded-r-sm"></div>
-                            <div className="absolute left-3 top-8 border-8 border-transparent border-l-main"></div>
+                        <div className="relative border-l-2 border-primary p-6 pl-10">
+                            <div className="absolute -left-3 top-8 w-6 h-4 bg-primary rounded-r-sm"></div>
+                            <div className="absolute left-3 top-8 border-8 border-transparent border-l-primary"></div>
 
                             <div className="h-40 overflow-y-auto custom-scrollbar">
                                 <h3 className="text-xl font-semibold">Tools & DevOps</h3>
@@ -77,9 +77,9 @@ const EduExperience: FC = () => {
                     <div className="bg-slate-900 ">
 
                         {/* ITEM */}
-                        <div className="relative border-l-2 border-main border-b border-b-slate-700 p-6 pl-10">
-                            <div className="absolute -left-3 top-8 w-6 h-4 bg-main rounded-r-sm"></div>
-                            <div className="absolute left-3 top-8 border-8 border-transparent border-l-main"></div>
+                        <div className="relative border-l-2 border-primary border-b border-b-slate-700 p-6 pl-10">
+                            <div className="absolute -left-3 top-8 w-6 h-4 bg-primary rounded-r-sm"></div>
+                            <div className="absolute left-3 top-8 border-8 border-transparent border-l-primary"></div>
 
                             <div className="h-40 overflow-y-auto custom-scrollbar">
                                 <h3 className="text-xl font-semibold">i&apos;Social Limited</h3>
@@ -93,9 +93,9 @@ const EduExperience: FC = () => {
                         </div>
 
                         {/* ITEM */}
-                        <div className="relative border-l-2 border-main border-b border-b-slate-700 p-6 pl-10">
-                            <div className="absolute -left-3 top-8 w-6 h-4 bg-main rounded-r-sm"></div>
-                            <div className="absolute left-3 top-8 border-8 border-transparent border-l-main"></div>
+                        <div className="relative border-l-2 border-primary border-b border-b-slate-700 p-6 pl-10">
+                            <div className="absolute -left-3 top-8 w-6 h-4 bg-primary rounded-r-sm"></div>
+                            <div className="absolute left-3 top-8 border-8 border-transparent border-l-primary"></div>
 
                             <div className="h-40 overflow-y-auto custom-scrollbar">
                                 <h3 className="text-xl font-semibold">Code 24</h3>
@@ -109,9 +109,9 @@ const EduExperience: FC = () => {
                         </div>
 
                         {/* ITEM */}
-                        <div className="relative border-l-2 border-main p-6 pl-10">
-                            <div className="absolute -left-3 top-8 w-6 h-4 bg-main rounded-r-sm"></div>
-                            <div className="absolute left-3 top-8 border-8 border-transparent border-l-main"></div>
+                        <div className="relative border-l-2 border-primary p-6 pl-10">
+                            <div className="absolute -left-3 top-8 w-6 h-4 bg-primary rounded-r-sm"></div>
+                            <div className="absolute left-3 top-8 border-8 border-transparent border-l-primary"></div>
 
                             <div className="h-40 overflow-y-auto custom-scrollbar">
                                 <h3 className="text-xl font-semibold">AgainSoft</h3>

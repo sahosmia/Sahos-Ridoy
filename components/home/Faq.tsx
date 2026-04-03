@@ -9,8 +9,8 @@ export interface Faq {
 
 const Faq = () => {
     return (
-        <section className="py-20 bg-gray-50">
-            <div className="container">
+        <section className="section bg-gray-50">
+            <div className="container-custom">
                 <SectionHead
                     des="faq"
                     title="Frequently Asked Questions"

@@ -5,9 +5,9 @@ import {
   FaGithub,
   FaFacebookF,
   FaYoutube,
-  // FaUpwork,
   FaTwitter
 } from "react-icons/fa";
+import { SiUpwork } from "react-icons/si";
 
 function Footer() {
   return (
@@ -15,7 +15,7 @@ function Footer() {
       <div className="container mx-auto px-4 py-10 flex flex-col md:flex-row items-center justify-between">
         <div className="text-center md:text-left mb-4 md:mb-0">
           <p className="text-sm md:text-base">
-            Designed & Developed by <span className="font-semibold text-white hover:text-green-500 transition-colors duration-300 cursor-pointer">Sahos Ridoy</span>
+            Designed & Developed by <span className="font-semibold text-white hover:text-primary transition-colors duration-300 cursor-pointer">Sahos Ridoy</span>
           </p>
           <p className="text-xs text-gray-400 mt-1">&copy; {new Date().getFullYear()} All rights reserved.</p>
         </div>
@@ -72,14 +72,14 @@ function Footer() {
           </a>
 
           {/* Upwork */}
-          {/* <a
-            href="https://www.upwork.com/freelancers/yourprofile"
+          <a
+            href="https://www.upwork.com/freelancers/~01e74a899688a44b8b"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-full bg-[#14A800] hover:bg-[#0F8A00] transition-colors duration-300 text-white text-lg"
+            className="p-2 rounded-full bg-social-upwork hover:bg-social-upwork-dark transition-colors duration-300 text-white text-lg"
           >
-            <FaUpwork />
-          </a> */}
+            <SiUpwork />
+          </a>
 
           {/* Twitter / X */}
           <a
