@@ -38,7 +38,7 @@ module.exports = {
           border: "#262626",
         },
         text: {
-          primary: "#ffffff",
+          primary: "#111827",
           secondary: "#94a3b8", // slate-400
           muted: "#64748b",      // slate-500
         },
