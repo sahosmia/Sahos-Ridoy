@@ -4,6 +4,7 @@ import ContactForm from "./ContactForm";
 import ContactSocialItem from "./ContactSocialItem";
 
 function Contact() {
+  
   return (
     <section id="contact" className="py-10 sm:py-16">
       {/* <div className="container text-center">

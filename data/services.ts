@@ -4,39 +4,39 @@ export interface Service {
   description: string;
 }
 
-export const services: Service[] = [
+// data/services.js
+export const services = [
   {
-    icon: "TfiPaintBucket",
-    title: "Web Design",
-    description:
-      "I am expert in Html, Css, Bootstrap, Tailwind, React Js, Vue Js, Next Js ",
-  },
-  {
-    icon: "BiCodeAlt",
+    icon: "FaCode",
     title: "Web Development",
-    description:
-      "Web development: Designing, coding, and maintaining websites for optimal online functionality.",
+    description: "Building responsive, high-performance websites with modern technologies like React, Next.js, and Laravel."
   },
   {
-    icon: "PiMonitor",
-    title: "Single Page Application",
-    description:
-      "SPA: Updates content dynamically, avoids full page reloads for smoother browsing.",
+    icon: "FaMobileAlt",
+    title: "Mobile Responsive",
+    description: "Creating seamless experiences across all devices with pixel-perfect responsive designs."
   },
   {
-    icon: "FaFigma",
-    title: "Figma Design",
-    description:
-      "Creating designs in Figma involves wireframing, prototyping, and collaborative editing.",
+    icon: "FaPaintBrush",
+    title: "UI/UX Design",
+    description: "Crafting intuitive and beautiful interfaces that users love to interact with."
   },
   {
-    icon: "GoDatabase",
-    title: "Rest Api",
-    description:
-      "REST API: Web service architecture for communication between client and server.",
+    icon: "FaDatabase",
+    title: "Backend Development",
+    description: "Developing robust server-side applications with Laravel, APIs, and database optimization."
   },
+  {
+    icon: "FaRocket",
+    title: "Performance Optimization",
+    description: "Speed optimization, SEO best practices, and performance tuning for better user experience."
+  },
+  {
+    icon: "FaHeadset",
+    title: "24/7 Support",
+    description: "Dedicated support and maintenance to keep your applications running smoothly."
+  }
 ];
-
 export interface Target {
   icon: string;
   title: string;

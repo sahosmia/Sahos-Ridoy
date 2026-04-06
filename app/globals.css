@@ -2,83 +2,170 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom selection color */
+  ::selection {
+    @apply bg-primary/30 text-white;
+  }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-surface;
+  }
+}
+
 @layer components {
-  /* Section Styles */
+  /* 🎯 Refined Section Styles */
+
   .section {
-    @apply py-16 md:py-24;
+    @apply py-16 md:py-20 lg:py-24;
   }
-
-  .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-4;
+  .section:first-of-type {
+    @apply pt-0;
   }
-
-  .section-subtitle {
-    @apply text-primary text-sm md:text-base font-bold uppercase mb-2 md:mb-4 tracking-widest;
+  .section:last-of-type {
+    @apply pb-16 md:pb-20 lg:pb-24;
   }
-
-  .section-description {
-    @apply text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed mb-10;
-  }
-
-  /* Button Styles */
-  .btn {
-    @apply inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:cursor-not-allowed;
-  }
-
-  .btn-primary {
-    @apply bg-primary text-white hover:bg-primary-dark shadow-[0_4px_14px_0_rgba(254,78,89,0.39)] hover:shadow-[0_6px_20px_rgba(254,78,89,0.23)];
-  }
-
-  .btn-outline {
-    @apply border-2 border-primary/30 text-primary hover:border-primary hover:bg-primary/5;
-  }
-
-  .btn-sm {
-    @apply px-5 py-2 text-sm;
-  }
-
-  /* Card Styles */
-  .card {
-    @apply bg-surface-muted rounded-3xl border border-surface-border hover:border-primary/30 transition-all duration-300 overflow-hidden;
-  }
-
-  .card-portfolio {
-    @apply relative overflow-hidden rounded-3xl bg-surface-muted border border-surface-border hover:border-primary/50 transition-all duration-500;
-  }
-
-  /* Common Layout Utilities */
   .container-custom {
     @apply container mx-auto px-4 md:px-6;
   }
 
-  /* Forms */
+  .section-header {
+    @apply mb-10 md:mb-14 lg:mb-16;
+  }
+  .section-header h2 {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary;
+  }
+
+  .section-header span {
+    @apply text-primary text-sm md:text-base font-semibold uppercase tracking-[0.2em];
+  }
+  .section-title {
+    @apply text-fluid-3xl font-bold bg-gradient-to-r from-white to-text-secondary bg-clip-text text-transparent mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-primary text-sm md:text-base font-semibold uppercase tracking-[0.2em] mb-3 inline-block;
+  }
+
+  /* 🪟 Glassmorphic Card */
+  .glass-card {
+    @apply bg-surface-glass backdrop-blur-xl border border-white/10 rounded-2xl;
+  }
+
+  /* ✨ Enhanced Button Styles */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 
+           focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 
+           relative overflow-hidden;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark 
+           shadow-[0_0_20px_rgba(254,78,89,0.3)] hover:shadow-[0_0_30px_rgba(254,78,89,0.5)]
+           active:scale-95;
+  }
+
+  .btn-primary::before {
+    content: "";
+    @apply absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent;
+    transition: left 0.5s ease;
+  }
+
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary/40 text-primary hover:bg-primary/10 
+           hover:border-primary backdrop-blur-sm;
+  }
+
+  /* 🃏 Bento Grid Card */
+  .bento-card {
+    @apply relative overflow-hidden rounded-3xl bg-surface-elevated border border-surface-border 
+           hover:border-primary/40 transition-all duration-500 
+           hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1;
+  }
+
+  /* 🌊 Smooth Inputs */
   .input-field {
-    @apply w-full bg-surface-muted border border-surface-border rounded-xl px-4 py-3 text-text-primary focus:outline-none focus:border-primary/50 transition-colors;
+    @apply w-full bg-surface-muted border border-surface-border rounded-xl px-5 py-3.5 
+           text-text-primary placeholder:text-text-muted
+           focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/60
+           transition-all duration-300;
   }
 }
 
-/* Slick Carousel Custom Styles */
-.portfolio-slider .slick-list {
-  @apply -mx-4 py-8;
+/* 🎨 Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-.portfolio-slider .slick-dots li button:before {
-  @apply text-primary text-lg transition-all duration-300;
+::-webkit-scrollbar-track {
+  @apply bg-surface;
 }
 
-.portfolio-slider .slick-dots li.slick-active button:before {
-  @apply text-primary opacity-100 scale-125;
+::-webkit-scrollbar-thumb {
+  @apply bg-surface-border rounded-full hover:bg-primary/60 transition-colors;
 }
 
-/* Scrollbar Customization */
+/* For horizontal scroll carousel */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
+  height: 6px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  @apply bg-surface;
+  @apply bg-surface-muted rounded-full;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   @apply bg-surface-border rounded-full hover:bg-primary/50 transition-colors;
+}
+
+/* Add to globals.css */
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+}
+
+@keyframes float-slow-reverse {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(20px) translateX(-10px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-float-slow-reverse {
+  animation: float-slow-reverse 10s ease-in-out infinite;
+}
+
+/* Add to globals.css if not already present */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

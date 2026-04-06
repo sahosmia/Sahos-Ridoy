@@ -1,28 +1,56 @@
+// components/home/SectionHead.jsx
 "use client";
-import { sectionHeaderMotion } from "@/lib/motion";
-import { motion } from "framer-motion";
 
-export default function SectionHead({
+import { motion } from "framer-motion";
+import { viewportConfig } from "@/lib/motion";
+
+const SectionHead = ({
   title,
   des,
-  content,
-}: {
-  title: string;
-  des: string;
-  content?: string;
-}) {
+  centered = true,
+  className = ""
+}) => {
   return (
-    <div className="container-custom mb-10">
-      <motion.p {...sectionHeaderMotion({ delay: 0.3 })} className="section-subtitle">
-        {des}
-      </motion.p>
-      <motion.h3
-        {...sectionHeaderMotion({ delay: 0.6 })}
-        className="section-title"
-      >
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={viewportConfig}
+      className={`
+        mb-12 md:mb-16 lg:mb-20
+        ${centered ? 'text-center' : 'text-left'}
+        ${className}
+      `}
+    >
+      {/* Badge / Subtitle */}
+      {des && (
+        <span className="
+          inline-block
+          text-primary text-sm md:text-base 
+          font-semibold uppercase tracking-[0.2em] 
+          mb-3 md:mb-4
+        ">
+          {des}
+        </span>
+      )}
+
+      {/* Title */}
+      <h2 className="
+        text-3xl sm:text-4xl md:text-5xl lg:text-6xl
+        font-bold 
+        text-text-primary
+        leading-tight
+      ">
         {title}
-      </motion.h3>
-      {content && <p className="text-slate-600 mb-8 max-w-2xl">{content}</p>}
-    </div>
+      </h2>
+
+      {/* Optional decorative line for centered titles */}
+      {centered && (
+        <div className="flex justify-center mt-4 md:mt-6">
+          <div className="w-12 h-1 bg-primary rounded-full" />
+        </div>
+      )}
+    </motion.div>
   );
-}
+};
+
+export default SectionHead;
