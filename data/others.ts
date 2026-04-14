@@ -1,14 +1,15 @@
 export interface PersonalInfo {
   title: string;
   value: string;
+  icon:string;
 }
 
 export const aboutPersonalInfoItems: PersonalInfo[] = [
-  { title: "Name", value: "Sahos Mia" },
-  { title: "Location", value: "Bangladesh" },
-  { title: "Phone", value: "01952827301" },
-  { title: "Education", value: "Bsc in CSE" },
-  { title: "Email", value: "sahosmia.webdev@gmail.com" },
+  { title: "Name", value: "Sahos Mia", icon:"FaUser" },
+  { title: "Location", value: "Dhaka, Bangladesh", icon: "FaMapMarkerAlt" },
+  { title: "Phone", value: "01952827301", icon: "FaPhone" },
+  { title: "Works", value: "AgainSoft", icon: "FaBriefcase" },
+  { title: "Email", value: "sahosmia.webdev@gmail.com", icon: "FaEnvelope" },
 ];
 
 export interface WhyWorkItem {

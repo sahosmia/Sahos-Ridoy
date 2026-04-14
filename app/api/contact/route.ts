@@ -1,20 +1,15 @@
-// app/api/contact/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { ContactFormData, ContactResponse } from '@/types/contact';
 import { getEmailHtmlTemplate, getEmailTextTemplate, getAutoReplyTemplate, isSpam } from '@/lib/email';
 
-// কনফিগারেশন - আপনার নিজের তথ্য দিন
 const CONFIG = {
-    // আপনার ইমেইল (যেখানে মেসেজ পাঠাবে)
-    YOUR_EMAIL: 'sahos@example.com', // 🔴 CHANGE THIS
+    YOUR_EMAIL: 'sahosmia.webdev@gmail.com', 
 
-    // ইমেইল সেন্ড করার ফাংশন (নিচে ইম্প্লিমেন্ট করা হবে)
     // আপনি Resend, Nodemailer, বা EmailJS ব্যবহার করতে পারেন
 };
 
-// Rate limiting - প্রতি IP থেকে 5 মিনিটে সর্বোচ্চ 3 টি রিকোয়েস্ট
 const rateLimit = new Map<string, { count: number; timestamp: number }>();
-const RATE_LIMIT_WINDOW = 5 * 60 * 1000; // 5 minutes
+const RATE_LIMIT_WINDOW = 5 * 60 * 1000; 
 const RATE_LIMIT_MAX = 3;
 
 function checkRateLimit(ip: string): boolean {
@@ -70,7 +65,6 @@ async function sendEmailWithResend(data: ContactFormData): Promise<boolean> {
         });
         */
 
-        // ডেমো: কনসোল লগ (প্রোডাকশনে রিমুভ করুন)
         console.log('📧 Email would be sent to:', CONFIG.YOUR_EMAIL);
         console.log('📧 Auto-reply would be sent to:', data.email);
 
@@ -81,7 +75,6 @@ async function sendEmailWithResend(data: ContactFormData): Promise<boolean> {
     }
 }
 
-// ইমেলজ ব্যবহার করে ইমেইল সেন্ড (সহজ বিকল্প)
 async function sendEmailWithEmailJS(data: ContactFormData): Promise<boolean> {
     try {
         // EmailJS ব্যবহার করতে চাইলে:
@@ -117,11 +110,8 @@ async function sendEmailWithEmailJS(data: ContactFormData): Promise<boolean> {
     }
 }
 
-// ডাটাবেসে সংরক্ষণ (অপশনাল)
 async function saveToDatabase(data: ContactFormData, ip: string): Promise<boolean> {
-    try {
-        // Prisma বা MongoDB ব্যবহার করতে চাইলে:
-        // await prisma.contact.create({ data: { ...data, ip } })
+    try {     
 
         console.log('💾 Would save to database:', { ...data, ip });
         return true;
@@ -131,17 +121,13 @@ async function saveToDatabase(data: ContactFormData, ip: string): Promise<boolea
     }
 }
 
-// মেইন POST হ্যান্ডলার
 export async function POST(request: NextRequest): Promise<NextResponse<ContactResponse>> {
     try {
-        // 1. IP অ্যাড্রেস পাওয়া
         const ip = request.headers.get('x-forwarded-for') || 'unknown';
 
-        // 2. রিকোয়েস্ট বডি পার্স করা
         const body: ContactFormData = await request.json();
         const { name, email, subject, message } = body;
 
-        // 3. ভ্যালিডেশন
         if (!name || !email || !subject || !message) {
             return NextResponse.json(
                 { success: false, message: 'All fields are required' },
@@ -149,7 +135,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<ContactRe
             );
         }
 
-        // 4. ইমেইল ভ্যালিডেশন
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             return NextResponse.json(
@@ -158,7 +143,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<ContactRe
             );
         }
 
-        // 5. নাম ভ্যালিডেশন (ন্যূনতম ২ অক্ষর)
         if (name.length < 2) {
             return NextResponse.json(
                 { success: false, message: 'Name must be at least 2 characters' },
@@ -166,7 +150,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<ContactRe
             );
         }
 
-        // 6. মেসেজ ভ্যালিডেশন (ন্যূনতম ১০ অক্ষর)
         if (message.length < 10) {
             return NextResponse.json(
                 { success: false, message: 'Message must be at least 10 characters' },
@@ -174,7 +157,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<ContactRe
             );
         }
 
-        // 7. স্প্যাম চেক
         if (isSpam(body)) {
             console.warn(`🚫 Spam detected from IP: ${ip}`);
             return NextResponse.json(
@@ -183,7 +165,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<ContactRe
             );
         }
 
-        // 8. রেট লিমিট চেক
         if (!checkRateLimit(ip)) {
             return NextResponse.json(
                 { success: false, message: 'Too many requests. Please try again later.' },
@@ -191,11 +172,9 @@ export async function POST(request: NextRequest): Promise<NextResponse<ContactRe
             );
         }
 
-        // 9. ইমেইল সেন্ড করুন
         const emailSent = await sendEmailWithResend(body);
 
         if (!emailSent) {
-            // ইমেইল ফেইল হলে দ্বিতীয় পদ্ধতি চেষ্টা করুন
             const emailSent2 = await sendEmailWithEmailJS(body);
             if (!emailSent2) {
                 return NextResponse.json(
@@ -205,10 +184,8 @@ export async function POST(request: NextRequest): Promise<NextResponse<ContactRe
             }
         }
 
-        // 10. ডাটাবেসে সংরক্ষণ (অপশনাল)
         await saveToDatabase(body, ip);
 
-        // 11. সাকসেস রেসপন্স
         return NextResponse.json({
             success: true,
             message: 'Message sent successfully! I will get back to you soon.',
@@ -227,7 +204,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<ContactRe
     }
 }
 
-// GET হ্যান্ডলার (অপশনাল - শুধু API স্ট্যাটাস চেকের জন্য)
 export async function GET() {
     return NextResponse.json({
         status: 'ok',

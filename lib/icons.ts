@@ -17,7 +17,11 @@ import {
   FaRocket,
   FaDatabase,
   FaPaintBrush,
-  FaMobileAlt
+  FaMobileAlt,
+  FaBriefcase,
+  FaUser,
+  FaMapMarkerAlt,
+  FaPhone
 } from "react-icons/fa";
 import { FaRepeat } from "react-icons/fa6";
 import { TfiPaintBucket } from "react-icons/tfi";
@@ -27,6 +31,9 @@ import { GoDatabase } from "react-icons/go";
 import { ImPhone } from "react-icons/im";
 
 export const iconMap = {
+  FaBriefcase,
+  FaMapMarkerAlt, FaPhone,
+  FaUser,
   FaCode,
   FaHeadset,
   FaRocket,

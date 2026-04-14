@@ -21,7 +21,6 @@
 
 @layer components {
   /* 🎯 Refined Section Styles */
-
   .section {
     @apply py-16 md:py-20 lg:py-24;
   }
@@ -55,7 +54,7 @@
 
   /* 🪟 Glassmorphic Card */
   .glass-card {
-    @apply bg-surface-glass backdrop-blur-xl border border-white/10 rounded-2xl;
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
   }
 
   /* ✨ Enhanced Button Styles */
@@ -88,7 +87,7 @@
 
   /* 🃏 Bento Grid Card */
   .bento-card {
-    @apply relative overflow-hidden rounded-3xl bg-surface-elevated border border-surface-border 
+    @apply relative overflow-hidden rounded-3xl bg-surface-muted/80 border border-surface-border 
            hover:border-primary/40 transition-all duration-500 
            hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1;
   }
@@ -99,6 +98,22 @@
            text-text-primary placeholder:text-text-muted
            focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/60
            transition-all duration-300;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/20;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent-purple bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:scale-[1.02] hover:shadow-xl;
   }
 }
 
@@ -129,10 +144,9 @@
   @apply bg-surface-border rounded-full hover:bg-primary/50 transition-colors;
 }
 
-/* Add to globals.css */
+/* 🎨 Animations */
 @keyframes float-slow {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0px) translateX(0px);
   }
   50% {
@@ -141,8 +155,7 @@
 }
 
 @keyframes float-slow-reverse {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0px) translateX(0px);
   }
   50% {
@@ -150,15 +163,6 @@
   }
 }
 
-.animate-float-slow {
-  animation: float-slow 8s ease-in-out infinite;
-}
-
-.animate-float-slow-reverse {
-  animation: float-slow-reverse 10s ease-in-out infinite;
-}
-
-/* Add to globals.css if not already present */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -168,4 +172,45 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+/* Animation Classes */
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-float-slow-reverse {
+  animation: float-slow-reverse 10s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Transition Utilities */
+.transition-smooth {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.transition-bounce {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition-duration: 300ms;
 }

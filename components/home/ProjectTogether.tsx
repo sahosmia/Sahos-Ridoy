@@ -9,7 +9,7 @@ import { fadeUpVariant, staggerContainer, viewportConfig, hoverScale } from "@/l
 function ProjectTogether() {
   const [isHovered, setIsHovered] = useState(false);
   const { scrollYProgress } = useScroll();
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 1]);
 
   return (
     <motion.section
