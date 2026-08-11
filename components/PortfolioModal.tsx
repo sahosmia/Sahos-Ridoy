@@ -37,7 +37,7 @@ const PortfolioModal: React.FC<PortfolioModalProps> = ({
   return (
     <AnimatePresence>
       <motion.div
-        id="modal-backdrop" // ব্যাকড্রপ আইডি
+        id="modal-backdrop" // Backdrop ID
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
