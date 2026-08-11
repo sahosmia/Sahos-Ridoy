@@ -1,0 +1,16 @@
+
+> sahos-mia@0.1.0 dev
+> next dev
+
+   ▲ Next.js 14.0.4
+   - Local:        http://localhost:3000
+
+ ✓ Ready in 1906ms
+ ○ Compiling / ...
+ ✓ Compiled / in 18.2s (1290 modules)
+ ✓ Compiled in 3.5s (642 modules)
+ ○ Compiling /portfolios ...
+ ✓ Compiled /portfolios in 1446ms (1275 modules)
+ ○ Compiling /(...)portfolios/[slug] ...
+ ✓ Compiled /(...)portfolios/[slug] in 1047ms (1308 modules)
+ ✓ Compiled in 1390ms (1322 modules)

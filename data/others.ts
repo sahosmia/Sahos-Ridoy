@@ -27,12 +27,12 @@ export const why_work_items: WhyWorkItem[] = [
   {
     icon: "FaRegSmile",
     title: "Good Communication",
-    description: "I will try to give 100% for good comminication.",
+    description: "I will try to give 100% for good communication.",
   },
   {
     icon: "FaRepeat",
     title: "Regular Update",
-    description: "You will know every update on my proggress on your project.",
+    description: "You will know every update on my progress on your project.",
   },
 ];
 

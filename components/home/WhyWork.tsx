@@ -2,14 +2,12 @@
 import Image from "next/image";
 import { why_work_items } from "@/data/others";
 import { motion } from "framer-motion";
-import DynamicIcon from "../core/DynamicIcon";
+import FeatureCard from "../ui/FeatureCard";
 import {
   fadeRightVariant,
   fadeUpVariant,
   staggerContainer,
   viewportConfig,
-  hoverLift,
-  hoverScale
 } from "@/lib/motion";
 
 function WhyWork() {
@@ -135,58 +133,14 @@ function WhyWork() {
             {/* Features List */}
             <div className="flex flex-col gap-6 md:gap-8">
               {why_work_items.map((item, index) => (
-                <motion.div
+                <FeatureCard
                   key={index}
-                  variants={fadeUpVariant(0.3 + index * 0.1)}
-                  {...hoverLift}
-                  className="group flex flex-col sm:flex-row gap-4 sm:gap-5 p-4 rounded-2xl hover:bg-surface-muted transition-all duration-500"
-                >
-                  {/* Icon */}
-                  <motion.div
-                    {...hoverScale}
-                    className="flex-shrink-0"
-                  >
-                    <span className="
-                      flex items-center justify-center
-                      w-14 h-14 md:w-16 md:h-16
-                      rounded-2xl
-                      bg-gradient-to-br from-primary/20 to-primary/5
-                      text-primary text-xl md:text-2xl
-                      shadow-lg shadow-primary/20
-                      group-hover:shadow-xl group-hover:shadow-primary/30
-                      group-hover:scale-110
-                      transition-all duration-500
-                    ">
-                      <DynamicIcon name={item.icon} />
-                    </span>
-                  </motion.div>
-
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h5 className="
-                      text-text-primary text-lg md:text-xl font-bold 
-                      mb-1 md:mb-2
-                      group-hover:text-primary
-                      transition-colors duration-300
-                    ">
-                      {item.title}
-                    </h5>
-                    <p className="text-text-secondary text-sm md:text-base leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-
-                  {/* Decorative arrow on hover */}
-                  <motion.div
-                    initial={{ opacity: 0, x: -10 }}
-                    whileHover={{ opacity: 1, x: 0 }}
-                    className="hidden lg:flex items-center"
-                  >
-                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </motion.div>
-                </motion.div>
+                  icon={item.icon}
+                  title={item.title}
+                  description={item.description}
+                  index={index}
+                  layout="list"
+                />
               ))}
             </div>
           </motion.div>

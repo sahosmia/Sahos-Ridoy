@@ -46,15 +46,15 @@ export interface Target {
 export const targets: Target[] = [
   {
     icon: "FaBullseye",
-    title: "Pixcel Perfect",
+    title: "Pixel Perfect",
     content:
-      "You will get pixcel perfect website such as figma design using tailwind css or Bootstrap",
+      "You will get pixel perfect website such as figma design using tailwind css or Bootstrap",
   },
   {
     icon: "FaRegClock",
     title: "Fast Delivery",
     content:
-      "Time is valueable tools for working. If you give me proper time to build your dream project, I could build an awesome project ",
+      "Time is valuable tools for working. If you give me proper time to build your dream project, I could build an awesome project ",
   },
   {
     icon: "FaRegSmileBeam",

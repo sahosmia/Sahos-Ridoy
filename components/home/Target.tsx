@@ -2,10 +2,9 @@
 
 import { targets } from "@/data/services";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import DynamicIcon from "../core/DynamicIcon";
 import SectionHeader from "../ui/SectionHeader";
-import { staggerContainer, fadeUpVariant, hoverLift, viewportConfig } from "@/lib/motion";
+import FeatureCard from "../ui/FeatureCard";
+import { staggerContainer, viewportConfig } from "@/lib/motion";
 
 function Target() {
   return (
@@ -42,84 +41,14 @@ function Target() {
         className="container mx-auto px-4 md:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
       >
         {targets.map((item, index) => (
-          <motion.div
+          <FeatureCard
             key={index}
-            variants={fadeUpVariant(index * 0.1)}
-            {...hoverLift}
-            className="
-              group relative p-6 md:p-8 rounded-3xl
-              bg-surface-muted 
-              border border-surface-border
-              hover:border-primary/40
-              transition-all duration-500
-              overflow-hidden
-              cursor-pointer
-            "
-          >
-            {/* Card Number Badge */}
-            <div className="absolute top-4 right-4 z-20">
-              <span className="
-                flex items-center justify-center
-                w-8 h-8 rounded-full
-                bg-primary/10 text-primary
-                text-sm font-bold
-                border border-primary/20
-                group-hover:bg-primary group-hover:text-white
-                group-hover:border-primary
-                transition-all duration-300
-              ">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-            </div>
-
-            {/* Animated gradient background on hover */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-            {/* Glowing orb effect */}
-            <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all duration-700" />
-
-            {/* Icon Container */}
-            <motion.div
-              whileHover={{ rotate: 5, scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400 }}
-              className="
-                w-16 h-16 flex items-center justify-center 
-                rounded-2xl 
-                bg-gradient-to-br from-primary/20 to-primary/5
-                text-primary text-3xl md:text-4xl
-                mb-5 md:mb-6
-                relative z-10
-              "
-            >
-              <DynamicIcon name={item.icon} />
-            </motion.div>
-
-            {/* Title */}
-            <h3
-              className="
-                text-text-primary text-xl md:text-2xl font-bold 
-                mb-2 md:mb-3
-                group-hover:text-primary
-                transition-colors duration-300
-                relative z-10
-              "
-            >
-              {item.title}
-            </h3>
-
-            {/* Description */}
-            <p className="text-text-secondary text-sm md:text-base leading-relaxed relative z-10">
-              {item.content}
-            </p>            
-
-            {/* Decorative line that appears on hover */}
-            <motion.div
-              initial={{ width: 0 }}
-              whileHover={{ width: "40px" }}
-              transition={{ duration: 0.3 }}
-              className="absolute bottom-6 left-6 h-0.5 bg-primary/50 rounded-full"
-            />
-          </motion.div>
+            icon={item.icon}
+            title={item.title}
+            description={item.content}
+            index={index}
+            layout="target"
+          />
         ))}
       </motion.div>
     </section>
