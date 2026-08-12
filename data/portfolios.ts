@@ -15,6 +15,21 @@ export interface Portfolio {
 
 export const portfolios: Portfolio[] = [
   {
+    title: "Sales & CRM System - Crystal Vision Solutions",
+    slug: "crystal-vision-crm",
+    description:
+      "A high-performance Sales & CRM system built for Crystal Vision Solutions. Covers the full customer journey — requirement gathering, follow-ups, meetings, quotations, sales, and post-sale installation tracking — with role-based access control, Excel import/export, and PDF quote generation.",
+    thumbnail: "/images/portfolio/crystal-crm.png",
+    images: ["/images/portfolio/crystal-crm.png"],
+    live_url: "https://crystalvisionsolutions.us/",
+    tecnology: ["Laravel", "React", "TypeScript", "Inertia.js", "Tailwind"],
+    github: "https://github.com/sahosmia/NewComCRM",
+    showStatus: true,
+    client: "Crystal Solutions",
+    type: "Development",
+    duration: "45 Days",
+  },
+  {
     title: "Bd Nirapd",
     slug: "bd-nirapad",
     description:
