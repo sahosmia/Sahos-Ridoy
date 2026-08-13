@@ -45,6 +45,21 @@ export const portfolios: Portfolio[] = [
     duration: "Ongoing",
   },
   {
+    title: "Project Proposal Management System",
+    slug: "project-proposal-management-system",
+    description:
+      "A role-based academic proposal workflow platform for institutions. Students submit and track project and industrial proposals, faculty members review and bulk-approve submissions, and admins manage users, departments, companies, R-cells, and system settings end-to-end.",
+    thumbnail: "/images/portfolio/thesis-project.png",
+    images: ["/images/portfolio/thesis-project.png"],
+    live_url: "",
+    tecnology: ["Laravel", "Alpine.js", "Tailwind"],
+    github: "https://github.com/sahosmia/Thesis_Project_Managment",
+    showStatus: true,
+    client: "Contact",
+    type: "Development",
+    duration: "Ongoing",
+  },
+  {
     title: "Bd Nirapd",
     slug: "bd-nirapad",
     description:
