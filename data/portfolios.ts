@@ -30,6 +30,21 @@ export const portfolios: Portfolio[] = [
     duration: "45 Days",
   },
   {
+    title: "Shop & Client Management System",
+    slug: "laumberse-shop-client-management",
+    description:
+      "An enterprise-grade Shop & Client Management System built as a modular monolith. Handles corporate and consumer pricing matrices, unified expense and auxiliary flow with atomic transactions, and intelligent payroll automation (net salary from base, bonus, and deductions), backed by a strict-typed service layer.",
+    thumbnail: "/images/portfolio/laumberse.png",
+    images: ["/images/portfolio/laumberse.png"],
+    live_url: "",
+    tecnology: ["Laravel", "React", "TypeScript", "Inertia.js", "Tailwind"],
+    github: "https://github.com/sahosmia/Laumberse",
+    showStatus: true,
+    client: "Contact",
+    type: "Development",
+    duration: "Ongoing",
+  },
+  {
     title: "Bd Nirapd",
     slug: "bd-nirapad",
     description:
