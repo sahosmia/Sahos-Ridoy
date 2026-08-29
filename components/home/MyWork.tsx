@@ -50,12 +50,12 @@ function MyWork() {
       className="section relative overflow-hidden bg-surface"
       id="portfolio"
     >
-      {/* ========== প্রিমিয়াম ব্যাকগ্রাউন্ড ইফেক্ট ========== */}
+      {/* ========== Premium Background Effects ========== */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* গ্রেডিয়েন্ট মেশ */}
+        {/* Gradient Mesh */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-accent-purple/5" />
 
-        {/* অ্যানিমেটেড অরব ১ */}
+        {/* Animated Orb 1 */}
         <motion.div
           animate={{
             scale: [1, 1.3, 1],
@@ -67,7 +67,7 @@ function MyWork() {
           className="absolute -top-40 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
         />
 
-        {/* অ্যানিমেটেড অরব ২ */}
+        {/* Animated Orb 2 */}
         <motion.div
           animate={{
             scale: [1.2, 1, 1.2],
@@ -79,7 +79,7 @@ function MyWork() {
           className="absolute -bottom-40 -left-20 w-96 h-96 bg-accent-purple/20 rounded-full blur-3xl"
         />
 
-        {/* অ্যানিমেটেড অরব ৩ - সেন্টারে */}
+        {/* Animated Orb 3 - Center */}
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
@@ -89,7 +89,7 @@ function MyWork() {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/10 rounded-full blur-3xl"
         />
 
-        {/* গ্রিড প্যাটার্ন ওভারলে */}
+        {/* Grid Pattern Overlay */}
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -102,9 +102,9 @@ function MyWork() {
       <SectionHead title="My Work" des="I try to satisfy client by my work" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        {/* ক্যারোজেল কন্টেইনার */}
+        {/* Carousel Container */}
         <div className="relative">
-          {/* কার্ড গ্রিড */}
+          {/* Card Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {visibleItems.map((item, idx) => (
               <motion.div
@@ -124,10 +124,10 @@ function MyWork() {
             ))}
           </div>
 
-          {/* ========== প্রিমিয়াম নেভিগেশন বাটন ========== */}
+          {/* ========== Premium Navigation Buttons ========== */}
           {showPortfolios.length > itemsToShow && (
             <>
-              {/* প্রিভিয়াস বাটন */}
+              {/* Previous Button */}
               <motion.button
                 onClick={prevSlide}
                 disabled={currentIndex === 0}
@@ -161,7 +161,7 @@ function MyWork() {
                 </motion.svg>
               </motion.button>
 
-              {/* নেক্সট বাটন */}
+              {/* Next Button */}
               <motion.button
                 onClick={nextSlide}
                 disabled={currentIndex + itemsToShow >= showPortfolios.length}
@@ -197,7 +197,7 @@ function MyWork() {
             </>
           )}
 
-          {/* ========== প্রিমিয়াম ডট ইন্ডিকেটর ========== */}
+          {/* ========== Premium Dot Indicators ========== */}
           {showPortfolios.length > itemsToShow && (
             <div className="flex justify-center items-center gap-3 mt-12">
               {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
@@ -221,7 +221,7 @@ function MyWork() {
                       scale: idx === currentIndex ? 1 : 0.8
                     }}
                   />
-                  {/* টুলটিপ */}
+                  {/* Tooltip */}
                   {idx !== currentIndex && (
                     <span className="
                       absolute -top-8 left-1/2 -translate-x-1/2
@@ -239,7 +239,7 @@ function MyWork() {
                 </motion.button>
               ))}
 
-              {/* কাউন্টার ইন্ডিকেটর */}
+              {/* Counter Indicator */}
               <span className="ml-4 text-text-muted text-sm">
                 {currentIndex + 1} / {maxIndex + 1}
               </span>
@@ -248,7 +248,7 @@ function MyWork() {
         </div>
       </div>
 
-      {/* ========== ডেকোরেটিভ শেপ ========== */}
+      {/* ========== Decorative Shape ========== */}
       <motion.div
         initial={{ x: -60, opacity: 0, rotate: -10 }}
         whileInView={{ x: 0, opacity: 0.4, rotate: 0 }}
@@ -264,7 +264,7 @@ function MyWork() {
         />
       </motion.div>
 
-      {/* ডান পাশের ডেকোরেটিভ এলিমেন্ট */}
+      {/* Right Side Decorative Element */}
       <motion.div
         initial={{ x: 60, opacity: 0, rotate: 10 }}
         whileInView={{ x: 0, opacity: 0.3, rotate: 0 }}

@@ -19,7 +19,7 @@ function ProjectTogether() {
       className="section relative overflow-hidden"
       style={{ opacity }}
     >
-      {/* BACKGROUND EFFECTS - পুরোপুরি ডার্ক */}
+      {/* BACKGROUND EFFECTS - Dark Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-surface via-surface to-primary/5" />
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -54,7 +54,7 @@ function ProjectTogether() {
         />
       </div>
 
-      {/* গ্রিড প্যাটার্ন - ডার্ক */}
+      {/* Grid pattern - Dark Overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, #fe4e59 1px, transparent 1px)`,
@@ -80,7 +80,7 @@ function ProjectTogether() {
             transition={{ duration: 0.7, ease: "easeOut" }}
           />
 
-          {/* Dark Overlay - কোন হোয়াইট নেই */}
+          {/* Dark Overlay - Complete Dark with No White */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-black/85" />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent" />
 

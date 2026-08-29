@@ -1,7 +1,7 @@
 // lib/email.ts
 import { ContactFormData, EmailData } from "@/types/contact";
 
-// ইমেইল টেমপ্লেট - HTML ভার্সন
+// Email template - HTML version
 export const getEmailHtmlTemplate = (data: ContactFormData): string => {
     return `
     <!DOCTYPE html>
@@ -132,7 +132,7 @@ export const getEmailHtmlTemplate = (data: ContactFormData): string => {
   `;
 };
 
-// ইমেইল টেমপ্লেট - টেক্সট ভার্সন
+// Email template - Text version
 export const getEmailTextTemplate = (data: ContactFormData): string => {
     return `
     NEW CONTACT FORM SUBMISSION
@@ -151,7 +151,7 @@ export const getEmailTextTemplate = (data: ContactFormData): string => {
   `;
 };
 
-// অটো রিপ্লাই ইমেইল টেমপ্লেট (ব্যবহারকারীকে)
+// Auto reply email template to user
 export const getAutoReplyTemplate = (name: string): string => {
     return `
     <!DOCTYPE html>
@@ -236,7 +236,7 @@ function escapeHtml(str: string): string {
         .replace(/'/g, '&#39;');
 }
 
-// স্প্যাম চেক
+// Spam check
 export function isSpam(data: ContactFormData): boolean {
     const spamKeywords = ['casino', 'viagra', 'porn', 'sex', 'xxx', 'lottery', 'bitcoin', 'crypto investment'];
     const allText = `${data.name} ${data.email} ${data.subject} ${data.message}`.toLowerCase();
@@ -247,7 +247,7 @@ export function isSpam(data: ContactFormData): boolean {
         }
     }
 
-    // অতিরিক্ত স্প্যাম চেক
+    // Additional spam checks
     if (data.message.length < 10) return true;
     if (data.message.split(' ').length < 3) return true;
 

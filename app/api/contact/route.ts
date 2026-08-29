@@ -5,7 +5,7 @@ import { getEmailHtmlTemplate, getEmailTextTemplate, getAutoReplyTemplate, isSpa
 const CONFIG = {
     YOUR_EMAIL: 'sahosmia.webdev@gmail.com', 
 
-    // আপনি Resend, Nodemailer, বা EmailJS ব্যবহার করতে পারেন
+    // You can use Resend, Nodemailer, or EmailJS
 };
 
 const rateLimit = new Map<string, { count: number; timestamp: number }>();
@@ -35,19 +35,19 @@ function checkRateLimit(ip: string): boolean {
     return true;
 }
 
-// ইমেইল সেন্ড করার ফাংশন (Resend API ব্যবহার করে)
+// Function to send email (using Resend API)
 async function sendEmailWithResend(data: ContactFormData): Promise<boolean> {
     try {
-        // Resend API ব্যবহার করতে চাইলে:
+        // If you want to use Resend API:
         // 1. `npm install resend`
-        // 2. Resend থেকে API key নিন
-        // 3. নিচের কোড আনকমেন্ট করুন
+        // 2. Get API key from Resend
+        // 3. Uncomment the code below
 
         /*
         const { Resend } = require('resend');
         const resend = new Resend(process.env.RESEND_API_KEY);
         
-        // আপনার ইমেইলে নোটিফিকেশন
+        // Notification to your email
         await resend.emails.send({
           from: 'Portfolio Contact <onboarding@resend.dev>',
           to: CONFIG.YOUR_EMAIL,
@@ -56,7 +56,7 @@ async function sendEmailWithResend(data: ContactFormData): Promise<boolean> {
           text: getEmailTextTemplate(data),
         });
         
-        // অটো রিপ্লাই (ব্যবহারকারীকে)
+        // Auto reply to user
         await resend.emails.send({
           from: 'Sahos Mia <onboarding@resend.dev>',
           to: data.email,
@@ -77,10 +77,10 @@ async function sendEmailWithResend(data: ContactFormData): Promise<boolean> {
 
 async function sendEmailWithEmailJS(data: ContactFormData): Promise<boolean> {
     try {
-        // EmailJS ব্যবহার করতে চাইলে:
-        // 1. EmailJS এ অ্যাকাউন্ট তৈরি করুন
-        // 2. Service ID, Template ID, Public Key নিন
-        // 3. নিচের কোড আনকমেন্ট করুন
+        // If you want to use EmailJS:
+        // 1. Create an EmailJS account
+        // 2. Get Service ID, Template ID, Public Key
+        // 3. Uncomment the code below
 
         /*
         const emailjs = require('@emailjs/nodejs');

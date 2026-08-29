@@ -2,13 +2,10 @@
 import { services } from "@/data/services";
 import SectionHead from "./SectionHead";
 import { motion } from "framer-motion";
-import DynamicIcon from "../core/DynamicIcon";
+import FeatureCard from "../ui/FeatureCard";
 import {
-  fadeUpVariant,
   staggerContainer,
   viewportConfig,
-  hoverLift,
-  hoverScale
 } from "@/lib/motion";
 
 function Service() {
@@ -62,94 +59,14 @@ function Service() {
         className="container mx-auto px-4 md:px-6 mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
       >
         {services.map((item, index) => (
-          <motion.div
+          <FeatureCard
             key={index}
-            variants={fadeUpVariant(index * 0.1)}
-            {...hoverLift}
-            className="group relative"
-          >
-            <div className="
-              relative h-full rounded-3xl p-6 md:p-8
-              bg-surface-muted/50 backdrop-blur-sm
-              border border-surface-border
-              hover:border-primary/50
-              transition-all duration-500
-              overflow-hidden
-            ">
-              {/* Animated gradient background on hover */}
-              <div className="
-                absolute inset-0 
-                bg-gradient-to-br from-primary/5 via-transparent to-accent-purple/5
-                opacity-0 group-hover:opacity-100
-                transition-opacity duration-700
-              " />
-
-              {/* Top Accent Line - Animated */}
-              <motion.div
-                initial={{ width: 0 }}
-                whileHover={{ width: "100%" }}
-                transition={{ duration: 0.5 }}
-                className="
-                  absolute top-0 left-0 h-1 
-                  bg-gradient-to-r from-primary to-accent-purple
-                  rounded-t-full
-                "
-              />
-
-              {/* Icon Container */}
-              <motion.div
-                {...hoverScale}
-                className="
-                  flex justify-center items-center
-                  w-20 h-20 mx-auto mb-6
-                  rounded-2xl
-                  bg-gradient-to-br from-primary/20 to-primary/5
-                  border border-primary/20
-                  group-hover:border-primary/50
-                  group-hover:shadow-lg group-hover:shadow-primary/20
-                  transition-all duration-500
-                "
-              >
-                <DynamicIcon
-                  name={item.icon}
-                  className="text-primary text-3xl md:text-4xl transition-transform duration-500 group-hover:scale-110"
-                />
-              </motion.div>
-
-              {/* Title */}
-              <h4 className="
-                text-text-primary text-xl md:text-2xl font-bold 
-                text-center mb-3
-                group-hover:text-primary
-                transition-colors duration-300
-              ">
-                {item.title}
-              </h4>
-
-              {/* Description */}
-              <p className="
-                text-text-secondary text-sm md:text-base 
-                text-center leading-relaxed
-              ">
-                {item.description}
-              </p>
-
-              {/* Decorative dot pattern at bottom */}
-              <div className="
-                absolute bottom-4 right-4 
-                opacity-0 group-hover:opacity-100
-                transition-opacity duration-500
-              ">
-                <div className="flex gap-1">
-                  <div className="w-1 h-1 rounded-full bg-primary/40" />
-                  <div className="w-1 h-1 rounded-full bg-primary/60" />
-                  <div className="w-1 h-1 rounded-full bg-primary/80" />
-                </div>
-              </div>
-
-            
-            </div>
-          </motion.div>
+            icon={item.icon}
+            title={item.title}
+            description={item.description}
+            index={index}
+            layout="service"
+          />
         ))}
       </motion.div>
     </motion.section>

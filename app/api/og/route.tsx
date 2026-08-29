@@ -7,12 +7,12 @@ export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
 
-    // ডাইনামিক প্যারামিটার
+    // Dynamic parameters
     const title = searchParams.get("title") || "Sahos Mia";
     const description = searchParams.get("description") || "Creative Developer & UI/UX Designer";
     const type = searchParams.get("type") || "website";
 
-    // ফন্ট লোড করুন (অপশনাল)
+    // Load font (Optional)
     const fontData = await fetch(
       new URL("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"),
     ).then((res) => res.text());

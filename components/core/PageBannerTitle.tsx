@@ -17,7 +17,7 @@ function PageBannerTitle({ title, img, subtitle }) {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Dark Overlay - সঠিকভাবে ফিক্স করা */}
+      {/* Dark Overlay - Properly Fixed */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/90" />
 
       {/* Animated Gradient Overlay */}
