@@ -12,8 +12,4 @@ export const menus: Menu[] = [
     title: "Portfolios",
     link: "/portfolios",
   },
-  {
-    title: "Posts",
-    link: "/posts",
-  },
 ];

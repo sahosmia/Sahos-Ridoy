@@ -1,10 +1,9 @@
 // components/PortfolioItemLinkButton.jsx
 "use client";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const PortfolioItemLinkButton = ({ slug, variant = "default" }) => {
+const PortfolioItemLinkButton = ({ variant = "default" }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const variants = {
@@ -20,8 +19,8 @@ const PortfolioItemLinkButton = ({ slug, variant = "default" }) => {
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      <Link
-        href={`/portfolios/${slug}`}
+      {/* Rendered as a span: the whole card is already a <Link>, and nesting <a> inside <a> is invalid HTML (causes a hydration error). */}
+      <span
         className={`
           inline-flex items-center gap-2
           font-medium text-sm
@@ -47,7 +46,7 @@ const PortfolioItemLinkButton = ({ slug, variant = "default" }) => {
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
         </motion.svg>
-      </Link>
+      </span>
     </motion.div>
   );
 };

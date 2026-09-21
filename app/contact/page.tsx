@@ -67,8 +67,8 @@ const Contact = () => {
                 </svg>
             ),
             title: "Email",
-            value: "sahos@example.com",
-            link: "mailto:sahos@example.com",
+            value: "sahosmia.webdev@gmail.com",
+            link: "mailto:sahosmia.webdev@gmail.com",
         },
         {
             icon: (
@@ -88,7 +88,7 @@ const Contact = () => {
                 </svg>
             ),
             title: "Location",
-            value: "Dhaka, Bangladesh",
+            value: "Mohakhali, Dhaka",
             link: null,
         },
     ];

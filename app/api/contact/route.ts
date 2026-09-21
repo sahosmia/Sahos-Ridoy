@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
 import { ContactFormData, ContactResponse } from '@/types/contact';
 import { getEmailHtmlTemplate, getEmailTextTemplate, getAutoReplyTemplate, isSpam } from '@/lib/email';
 
 const CONFIG = {
     YOUR_EMAIL: 'sahosmia.webdev@gmail.com', 
 
-    // আপনি Resend, Nodemailer, বা EmailJS ব্যবহার করতে পারেন
 };
 
 const rateLimit = new Map<string, { count: number; timestamp: number }>();
@@ -35,90 +35,49 @@ function checkRateLimit(ip: string): boolean {
     return true;
 }
 
-// ইমেইল সেন্ড করার ফাংশন (Resend API ব্যবহার করে)
 async function sendEmailWithResend(data: ContactFormData): Promise<boolean> {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+        console.error('RESEND_API_KEY is not configured');
+        return false;
+    }
+
+    const resend = new Resend(apiKey);
+    const to = process.env.CONTACT_EMAIL || CONFIG.YOUR_EMAIL;
+
     try {
-        // Resend API ব্যবহার করতে চাইলে:
-        // 1. `npm install resend`
-        // 2. Resend থেকে API key নিন
-        // 3. নিচের কোড আনকমেন্ট করুন
-
-        /*
-        const { Resend } = require('resend');
-        const resend = new Resend(process.env.RESEND_API_KEY);
-        
-        // আপনার ইমেইলে নোটিফিকেশন
-        await resend.emails.send({
-          from: 'Portfolio Contact <onboarding@resend.dev>',
-          to: CONFIG.YOUR_EMAIL,
-          subject: `New Contact: ${data.subject}`,
-          html: getEmailHtmlTemplate(data),
-          text: getEmailTextTemplate(data),
+        const { error } = await resend.emails.send({
+            from: 'Portfolio Contact <onboarding@resend.dev>',
+            to,
+            replyTo: data.email,
+            subject: `New Contact: ${data.subject}`,
+            html: getEmailHtmlTemplate(data),
+            text: getEmailTextTemplate(data),
         });
-        
-        // অটো রিপ্লাই (ব্যবহারকারীকে)
-        await resend.emails.send({
-          from: 'Sahos Mia <onboarding@resend.dev>',
-          to: data.email,
-          subject: 'Thank you for contacting me!',
-          html: getAutoReplyTemplate(data.name),
-        });
-        */
 
-        console.log('📧 Email would be sent to:', CONFIG.YOUR_EMAIL);
-        console.log('📧 Auto-reply would be sent to:', data.email);
-
-        return true;
+        if (error) {
+            console.error('Resend error:', error);
+            return false;
+        }
     } catch (error) {
         console.error('Email sending failed:', error);
         return false;
     }
-}
 
-async function sendEmailWithEmailJS(data: ContactFormData): Promise<boolean> {
+    // Auto-reply is best-effort: it can fail (e.g. unverified sending domain)
+    // without the visitor's message being lost.
     try {
-        // EmailJS ব্যবহার করতে চাইলে:
-        // 1. EmailJS এ অ্যাকাউন্ট তৈরি করুন
-        // 2. Service ID, Template ID, Public Key নিন
-        // 3. নিচের কোড আনকমেন্ট করুন
-
-        /*
-        const emailjs = require('@emailjs/nodejs');
-        
-        await emailjs.send(
-          process.env.EMAILJS_SERVICE_ID,
-          process.env.EMAILJS_TEMPLATE_ID,
-          {
-            from_name: data.name,
-            from_email: data.email,
-            subject: data.subject,
-            message: data.message,
-            to_email: CONFIG.YOUR_EMAIL,
-          },
-          {
-            publicKey: process.env.EMAILJS_PUBLIC_KEY,
-            privateKey: process.env.EMAILJS_PRIVATE_KEY,
-          }
-        );
-        */
-
-        console.log('📧 EmailJS would send email');
-        return true;
+        await resend.emails.send({
+            from: 'Sahos Mia <onboarding@resend.dev>',
+            to: data.email,
+            subject: 'Thank you for contacting me!',
+            html: getAutoReplyTemplate(data.name),
+        });
     } catch (error) {
-        console.error('EmailJS failed:', error);
-        return false;
+        console.warn('Auto-reply failed:', error);
     }
-}
 
-async function saveToDatabase(data: ContactFormData, ip: string): Promise<boolean> {
-    try {     
-
-        console.log('💾 Would save to database:', { ...data, ip });
-        return true;
-    } catch (error) {
-        console.error('Database save failed:', error);
-        return false;
-    }
+    return true;
 }
 
 export async function POST(request: NextRequest): Promise<NextResponse<ContactResponse>> {
@@ -175,16 +134,11 @@ export async function POST(request: NextRequest): Promise<NextResponse<ContactRe
         const emailSent = await sendEmailWithResend(body);
 
         if (!emailSent) {
-            const emailSent2 = await sendEmailWithEmailJS(body);
-            if (!emailSent2) {
-                return NextResponse.json(
-                    { success: false, message: 'Failed to send message. Please try again later.' },
-                    { status: 500 }
-                );
-            }
+            return NextResponse.json(
+                { success: false, message: 'Failed to send message. Please try again later.' },
+                { status: 500 }
+            );
         }
-
-        await saveToDatabase(body, ip);
 
         return NextResponse.json({
             success: true,

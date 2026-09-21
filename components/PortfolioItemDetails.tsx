@@ -10,7 +10,7 @@ import { fadeUpVariant, staggerContainer, viewportConfig, hoverScale } from "@/l
 const PortfolioItemDetails = ({ portfolio }) => {
   // Info items for better mapping
   const infoItems = [
-    { label: "Technology", value: portfolio.tecnology?.join(", "), show: true },
+    { label: "Technology", value: portfolio.technology?.join(", "), show: true },
     { label: "Marketplace", value: portfolio.client === "Contact" ? "Outside of Marketplace" : portfolio.client, show: portfolio.client },
     { label: "Type", value: portfolio.type, show: portfolio.type },
     { label: "Duration", value: portfolio.duration, show: portfolio.duration },

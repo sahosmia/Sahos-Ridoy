@@ -21,7 +21,7 @@ function Footer() {
     { icon: FaWhatsapp, href: "https://wa.me/8801952827301", label: "WhatsApp", color: "hover:bg-green-500" },
     { icon: FaLinkedin, href: "https://linkedin.com/in/sahosmia", label: "LinkedIn", color: "hover:bg-blue-700" },
     { icon: FaGithub, href: "https://github.com/sahosmia", label: "GitHub", color: "hover:bg-gray-700" },
-    { icon: FaFacebookF, href: "https://facebook.com/sahosridoy", label: "Facebook", color: "hover:bg-blue-600" },
+    { icon: FaFacebookF, href: "https://facebook.com/sahosmia301", label: "Facebook", color: "hover:bg-blue-600" },
     { icon: FaYoutube, href: "https://youtube.com/@sahosmia", label: "YouTube", color: "hover:bg-red-600" },
     { icon: SiUpwork, href: "https://www.upwork.com/freelancers/~01e74a899688a44b8b", label: "Upwork", color: "hover:bg-social-upwork" },
     { icon: FaTwitter, href: "https://twitter.com/sahosmia", label: "Twitter", color: "hover:bg-black" },
@@ -67,7 +67,7 @@ function Footer() {
                 transition-colors duration-300 
                 cursor-pointer
               ">
-                Sahos Ridoy
+                Sahos Mia
               </span>
             </p>
             <p className="text-text-muted text-xs mt-1">

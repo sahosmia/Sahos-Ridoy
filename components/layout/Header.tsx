@@ -81,7 +81,7 @@ function Header() {
               href="/"
               className="group relative text-text-primary text-2xl font-bold tracking-tighter"
             >
-              <span className="text-primary">S</span>Ridoy
+              <span className="text-primary">S</span>Mia
               <span className="text-primary">.</span>
 
               {/* Animated underline on hover */}

@@ -160,15 +160,14 @@ export default function About() {
             variants={fadeUpVariant()}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-4"
           >
-            Developer <span className="text-primary">For You</span>
+            Laravel Developer <span className="text-primary">For Your Business</span>
           </motion.h3>
 
           <motion.p
             variants={fadeUpVariant()}
             className="text-text-secondary text-lg max-w-xl mb-8 leading-relaxed"
           >
-            Passionate web developer and designer crafting innovative,
-            functional digital experiences with precision and care.
+            Laravel full-stack developer with 3+ years of experience building CRM/ERP, logistics, financial and workflow-management applications with PHP, Laravel, React, Inertia.js and MySQL — including remote work for an Australian company.
           </motion.p>
 
           {/* Personal info grid */}
@@ -187,7 +186,7 @@ export default function About() {
           <motion.a
             variants={fadeUpVariant()}
             {...hoverScale}
-            href="/doc/cv.pdf"
+            href="/doc/Sahos_Mia_CV_Laravel_Developer.pdf"
             target="_blank"
             className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primary-dark text-white rounded-xl font-bold overflow-hidden shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-300"
           >
@@ -239,6 +238,7 @@ export default function About() {
                 src="/images/avatar.png"
                 alt="Sahos Mia"
                 fill
+                sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 400px"
                 className="object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
                 priority
               />

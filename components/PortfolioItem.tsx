@@ -8,7 +8,7 @@ import { hoverLift, hoverGlow } from "@/lib/motion";
 
 const PortfolioItem = ({ item }) => {
   // Tech stack with fallback
-  const techStack = item.technologies || item.tags || ["React", "Next.js", "Tailwind"];
+  const techStack: string[] = item.technology || item.technologies || item.tags || [];
 
   // Optional: Add loading state for image
   const imagePriority = item.featured || false;
@@ -112,7 +112,7 @@ const PortfolioItem = ({ item }) => {
 
               {/* View Project Button */}
               <div className="relative z-10 mt-auto">
-                <PortfolioItemLinkButton slug={item.slug} />
+                <PortfolioItemLinkButton />
               </div>
             </div>
 

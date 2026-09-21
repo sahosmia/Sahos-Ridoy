@@ -120,16 +120,15 @@ function WhyWork() {
               variants={fadeUpVariant(0.1)}
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary leading-tight mb-4"
             >
-              Best result with{" "}
-              <span className="text-primary">top user experience</span>
+              Software that{" "}
+              <span className="text-primary">works for your business</span>
             </motion.h3>
 
             <motion.p
               variants={fadeUpVariant(0.2)}
               className="text-text-secondary text-base md:text-lg mb-10 leading-relaxed"
             >
-              I focus on creating high-quality digital products that provide
-              exceptional user experiences and meet your business goals.
+              I build reliable Laravel applications — CRM, ERP, logistics and inventory systems — that are secure, maintainable and ready for real-world use.
             </motion.p>
 
             {/* Features List */}

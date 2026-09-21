@@ -9,9 +9,9 @@ function PageBannerTitle({ title, img, subtitle }) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={viewportConfig}
-      className="relative min-h-[50vh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-surface"
       style={{
-        backgroundImage: img ? `url(${img})` : "url('/images/page-banner-default.jpg')",
+        backgroundImage: img ? `url(${img})` : undefined,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

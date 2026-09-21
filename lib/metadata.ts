@@ -8,8 +8,8 @@ interface MetadataProps {
 }
 
 export function constructMetadata({
-  title = "Sahos Ridoy | Full Stack Developer",
-  description = "Sahos Mia is a professional full-stack web developer specializing in React, Next.js, and Laravel.",
+  title = "Sahos Mia | Laravel Full-Stack Developer",
+  description = "Sahos Mia is a Laravel full-stack developer with 3+ years of experience building CRM, ERP, logistics and inventory systems with Laravel, React and Inertia.js.",
   image = "/images/avatar.png",
   noIndex = false,
 }: MetadataProps = {}): Metadata {
@@ -18,14 +18,14 @@ export function constructMetadata({
   return {
     title: {
       default: title,
-      template: `%s | Sahos Ridoy`,
+      template: `%s | Sahos Mia`,
     },
     description,
     openGraph: {
       title,
       description,
       url: siteUrl,
-      siteName: "Sahos Ridoy Portfolio",
+      siteName: "Sahos Mia Portfolio",
       images: [
         {
           url: image.startsWith("http") ? image : `${siteUrl}${image}`,
@@ -39,9 +39,6 @@ export function constructMetadata({
       description,
       images: [image.startsWith("http") ? image : `${siteUrl}${image}`],
       creator: "@sahosmia",
-    },
-    icons: {
-      icon: "/favicon.ico",
     },
     metadataBase: new URL(siteUrl),
     ...(noIndex && {

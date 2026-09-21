@@ -26,10 +26,10 @@ function Target() {
 
       {/* Section Header */}
       <SectionHeader
-        badge="What I Deliver"
-        title="My Core Targets"
-        titleHighlight="Targets"
-        subtitle="Every project I undertake focuses on these key principles"
+        badge="How I Build"
+        title="My Engineering Principles"
+        titleHighlight="Principles"
+        subtitle="Every application I build is guided by these three principles"
         centered={true}
       />
 

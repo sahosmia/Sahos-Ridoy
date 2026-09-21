@@ -7,7 +7,7 @@ const colorMap = {
 };
 
 export default function ContactSocialItem({ contact }) {
-  const { variant, icon, title, val } = contact;
+  const { variant, icon, title, val, href } = contact;
 
   return (
     <div className="flex items-center gap-2 md:gap-5">
@@ -20,7 +20,16 @@ export default function ContactSocialItem({ contact }) {
         <h6 className="text-md md:text-lg lg:text-xl font-bold text-gray-700">
           {title}
         </h6>
-        <p className="text-slate-400 break-words text-sm md:text-base">{val}</p>
+        {href ? (
+          <a
+            href={href}
+            className="text-slate-400 hover:text-primary break-words text-sm md:text-base transition-colors"
+          >
+            {val}
+          </a>
+        ) : (
+          <p className="text-slate-400 break-words text-sm md:text-base">{val}</p>
+        )}
       </div>
     </div>
   );

@@ -9,8 +9,17 @@ export const AboutPersonalInfoItem = ({ item }) => {
         <DynamicIcon name={item.icon} className="w-5 h-5" />
       </div>
       <div>
-        <p className="text-text-muted text-sm uppercase tracking-wide">{item.label}</p>
-        <p className="text-text-primary font-medium mt-0.5">{item.value}</p>
+        <p className="text-text-muted text-sm uppercase tracking-wide">{item.title}</p>
+        {item.href ? (
+          <a
+            href={item.href}
+            className="text-text-primary font-medium mt-0.5 hover:text-primary transition-colors break-all"
+          >
+            {item.value}
+          </a>
+        ) : (
+          <p className="text-text-primary font-medium mt-0.5">{item.value}</p>
+        )}
       </div>
     </div>
   );

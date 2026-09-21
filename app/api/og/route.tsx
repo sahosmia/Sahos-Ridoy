@@ -9,7 +9,7 @@ export async function GET(request: Request) {
 
     // ডাইনামিক প্যারামিটার
     const title = searchParams.get("title") || "Sahos Mia";
-    const description = searchParams.get("description") || "Creative Developer & UI/UX Designer";
+    const description = searchParams.get("description") || "Laravel Full-Stack Developer";
     const type = searchParams.get("type") || "website";
 
     // ফন্ট লোড করুন (অপশনাল)

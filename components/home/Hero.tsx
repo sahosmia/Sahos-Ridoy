@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 
 // =========================
 // Animation Config
@@ -51,11 +52,11 @@ const pulseAnimation = {
 // =========================
 const heroData = {
   name: "Sahos Mia",
-  role: "Creative Developer",
-  subRole: "UI/UX Designer",
-  location: "New York",
+  role: "Laravel Full-Stack Developer",
+  subRole: "React & Inertia.js",
+  location: "Dhaka, Bangladesh",
   description:
-    "I craft exceptional digital experiences that blend beautiful aesthetics with powerful performance.",
+    "I build CRM, ERP, logistics and inventory systems with PHP, Laravel, React and Inertia.js — clean, secure and ready for real business use.",
 };
 
 // =========================
@@ -116,52 +117,6 @@ const FloatingShapes = () => (
         <div className="absolute top-0 left-1/2 w-0.5 h-full bg-primary/40 -translate-x-1/2" />
       </div>
     </motion.div>
-
-    {/* Floating Dots Cluster */}
-    {[...Array(8)].map((_, i) => (
-      <motion.div
-        key={i}
-        animate={{
-          y: [0, -40, 0],
-          x: [0, Math.sin(i) * 30, 0],
-          opacity: [0.1, 0.4, 0.1],
-        }}
-        transition={{
-          duration: 4 + (i % 3),
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: i * 0.3,
-        }}
-        className="absolute w-1.5 h-1.5 bg-primary/40 rounded-full"
-        style={{
-          top: `${10 + (i * 8)}%`,
-          left: `${2 + (i * 12)}%`,
-        }}
-      />
-    ))}
-
-    {/* Right side floating dots */}
-    {[...Array(6)].map((_, i) => (
-      <motion.div
-        key={`right-${i}`}
-        animate={{
-          y: [0, -30, 0],
-          x: [0, -20, 0],
-          opacity: [0.1, 0.35, 0.1],
-        }}
-        transition={{
-          duration: 5 + (i % 4),
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: i * 0.4,
-        }}
-        className="absolute w-1 h-1 bg-accent-purple/40 rounded-full"
-        style={{
-          top: `${15 + (i * 10)}%`,
-          right: `${5 + (i * 8)}%`,
-        }}
-      />
-    ))}
   </div>
 );
 
@@ -177,7 +132,7 @@ const HeroBadge = () => (
       className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium backdrop-blur-sm"
     >
       <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-      Available for work
+      Open to Laravel roles &amp; freelance projects
       <span className="w-1 h-1 bg-primary rounded-full animate-pulse" />
     </motion.span>
   </motion.div>
@@ -194,7 +149,7 @@ const HeroTitle = ({ data }) => (
 
     <motion.h1
       variants={fadeUp(0.2)}
-      className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
+      className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
     >
       <span className="bg-gradient-to-r from-white via-primary-light to-primary bg-clip-text text-transparent">
         {data.name}
@@ -202,14 +157,15 @@ const HeroTitle = ({ data }) => (
     </motion.h1>
 
     <motion.div variants={fadeUp(0.3)} className="mb-6">
-      <div className="inline-flex items-center gap-2 text-xl md:text-2xl text-text-secondary">
+      <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-x-2 text-xl md:text-2xl text-text-secondary">
         <motion.span
           animate={{ rotate: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
           ✨
         </motion.span>
-        <span>{data.role} &</span>
+        <span>{data.role}</span>
+        <span className="text-text-muted">|</span>
         <span className="text-primary font-semibold">{data.subRole}</span>
         <motion.span
           animate={{ rotate: [0, -10, 0] }}
@@ -222,7 +178,7 @@ const HeroTitle = ({ data }) => (
 
     <motion.p
       variants={fadeUp(0.4)}
-      className="text-text-secondary text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+      className="text-text-secondary text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed"
     >
       {data.description} Based in {data.location}.
     </motion.p>
@@ -232,7 +188,7 @@ const HeroTitle = ({ data }) => (
 const HeroStats = () => {
   const stats = useMemo(
     () => [
-      { value: "5+", label: "Years Experience", icon: "⭐" },
+      { value: "3+", label: "Years Experience", icon: "⭐" },
       { value: "50+", label: "Projects Completed", icon: "🚀" },
       { value: "24/7", label: "Support", icon: "💬" },
     ],
@@ -242,7 +198,7 @@ const HeroStats = () => {
   return (
     <motion.div
       variants={fadeUp(0.5)}
-      className="flex justify-center gap-8 md:gap-12 mt-10 mb-8"
+      className="flex justify-center lg:justify-start gap-8 md:gap-12 mt-10 mb-8"
     >
       {stats.map((stat, idx) => (
         <motion.div
@@ -266,12 +222,12 @@ const HeroStats = () => {
 const HeroCTA = () => (
   <motion.div
     variants={fadeUp(0.6)}
-    className="flex gap-4 justify-center flex-wrap"
+    className="flex gap-4 justify-center lg:justify-start flex-wrap"
   >
     <motion.div {...hoverScale}>
       <Link
-        href="/portfolios"
-        aria-label="View Portfolio"
+        href="/contact"
+        aria-label="Hire Me"
         className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primary-dark text-white rounded-2xl font-bold overflow-hidden shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-300"
       >
         <motion.div
@@ -280,7 +236,7 @@ const HeroCTA = () => (
           whileHover={{ x: 0 }}
           transition={{ duration: 0.4 }}
         />
-        <span className="relative z-10">View Portfolio</span>
+        <span className="relative z-10">Hire Me</span>
         <svg
           className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform"
           fill="none"
@@ -298,9 +254,11 @@ const HeroCTA = () => (
     </motion.div>
 
     <motion.div {...hoverScale}>
-      <Link
-        href="#about"
-        aria-label="Learn More"
+      <a
+        href="/doc/Sahos_Mia_CV_Laravel_Developer.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Download CV"
         className="inline-flex items-center gap-2 px-8 py-4 bg-surface-muted/80 backdrop-blur-sm border border-surface-border text-text-primary rounded-2xl font-bold hover:bg-surface-muted hover:border-primary/50 transition-all duration-300"
       >
         <svg
@@ -316,9 +274,42 @@ const HeroCTA = () => (
             d="M19 14l-7 7m0 0l-7-7m7 7V3"
           />
         </svg>
-        Learn More
-      </Link>
+        Download CV
+      </a>
     </motion.div>
+  </motion.div>
+);
+
+// =========================
+// Hero Photo
+// =========================
+
+const HeroPhoto = () => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.92 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+    className="relative mx-auto w-56 sm:w-72 lg:w-[420px] order-first lg:order-last"
+  >
+    <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-primary/30 via-accent-purple/20 to-transparent blur-2xl" />
+
+    <div className="relative aspect-square rounded-[2rem] overflow-hidden border border-surface-border bg-surface-muted shadow-2xl">
+      <Image
+        src="/images/avatar.png"
+        alt="Sahos Mia, Laravel Full-Stack Developer"
+        fill
+        priority
+        sizes="(max-width: 640px) 224px, (max-width: 1024px) 288px, 420px"
+        className="object-cover"
+      />
+    </div>
+
+    <div className="absolute -left-3 lg:-left-6 bottom-6 px-4 py-2 rounded-xl bg-surface-muted/90 backdrop-blur border border-surface-border text-xs sm:text-sm text-text-secondary shadow-lg">
+      <span className="text-primary font-semibold">Laravel</span> · React · Inertia.js
+    </div>
+    <div className="absolute -right-3 lg:-right-6 top-6 px-4 py-2 rounded-xl bg-surface-muted/90 backdrop-blur border border-surface-border text-xs sm:text-sm text-text-secondary shadow-lg">
+      MySQL · REST API · RBAC
+    </div>
   </motion.div>
 );
 
@@ -327,7 +318,6 @@ const HeroCTA = () => (
 // =========================
 
 const Hero = () => {
-  const [mounted, setMounted] = useState(false);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -335,7 +325,6 @@ const Hero = () => {
   const smoothY = useSpring(mouseY, { damping: 30, stiffness: 200 });
 
   useEffect(() => {
-    setMounted(true);
     let rafId;
 
     const handleMouseMove = (e) => {
@@ -356,8 +345,6 @@ const Hero = () => {
 
   const bgX = useTransform(smoothX, (v) => v * 0.02);
   const bgY = useTransform(smoothY, (v) => v * 0.02);
-
-  if (!mounted) return null;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-surface">
@@ -412,40 +399,21 @@ const Hero = () => {
       />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center pt-24 pb-20 lg:py-0">
         <motion.div
           variants={stagger}
           initial="hidden"
           animate="show"
-          className="max-w-4xl mx-auto text-center"
+          className="text-center lg:text-left"
         >
           <HeroBadge />
           <HeroTitle data={heroData} />
           <HeroStats />
           <HeroCTA />
-
-          {/* Animated Scroll Indicator */}
-          <motion.div
-            className="absolute bottom-10 left-1/2 -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
-            <div className="relative">
-              {/* Pulse ring */}
-              <motion.div
-                className="absolute inset-0 rounded-full border-2 border-primary/50"
-                animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              />
-              <div className="w-6 h-10 border-2 border-text-muted rounded-full flex justify-center relative z-10">
-                <motion.div
-                  className="w-1 h-2 bg-primary rounded-full mt-2"
-                  animate={{ y: [0, 4, 0] }}
-                  transition={{ duration: 1, repeat: Infinity }}
-                />
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
+
+        <HeroPhoto />
+        </div>
       </div>
     </section>
   );

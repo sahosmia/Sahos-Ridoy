@@ -12,8 +12,8 @@ import WhatsAppButton from "@/components/home/WhatsAppButton";
 import EduExperience from "@/components/home/EduExperience";
 
 export const metadata: Metadata = {
-  title: "Home | Full Stack Developer",
-  description: "Sahos Mia is a professional full-stack web developer specializing in React, Next.js, and Laravel.",
+  title: "Home | Laravel Full-Stack Developer",
+  description: "Sahos Mia is a Laravel full-stack developer with 3+ years of experience building CRM, ERP, logistics and inventory systems with Laravel, React and Inertia.js.",
 };
 
 

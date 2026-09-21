@@ -4,39 +4,45 @@ export interface Service {
   description: string;
 }
 
-// data/services.js
-export const services = [
+export const services: Service[] = [
   {
     icon: "FaCode",
-    title: "Web Development",
-    description: "Building responsive, high-performance websites with modern technologies like React, Next.js, and Laravel."
+    title: "Custom Laravel Applications",
+    description:
+      "Business web apps built with PHP and Laravel — clean MVC, Eloquent ORM, Repository/Service architecture and queue-based background jobs.",
   },
   {
-    icon: "FaMobileAlt",
-    title: "Mobile Responsive",
-    description: "Creating seamless experiences across all devices with pixel-perfect responsive designs."
-  },
-  {
-    icon: "FaPaintBrush",
-    title: "UI/UX Design",
-    description: "Crafting intuitive and beautiful interfaces that users love to interact with."
+    icon: "FaBriefcase",
+    title: "CRM & ERP Systems",
+    description:
+      "Lead management, quotations, inventory, accounting and workflow automation tailored to how your business actually operates.",
   },
   {
     icon: "FaDatabase",
-    title: "Backend Development",
-    description: "Developing robust server-side applications with Laravel, APIs, and database optimization."
+    title: "REST API & Database Design",
+    description:
+      "Well-structured MySQL/MongoDB schemas and secure REST APIs, with authentication and role-based access control (RBAC).",
   },
   {
     icon: "FaRocket",
-    title: "Performance Optimization",
-    description: "Speed optimization, SEO best practices, and performance tuning for better user experience."
+    title: "React + Inertia.js Frontends",
+    description:
+      "Fast, responsive single-page experiences with React, TypeScript, Inertia.js and Tailwind CSS on top of a Laravel backend.",
+  },
+  {
+    icon: "FaFigma",
+    title: "Figma to Code",
+    description:
+      "Pixel-perfect, mobile-responsive interfaces built from your Figma designs with Tailwind CSS or Bootstrap.",
   },
   {
     icon: "FaHeadset",
-    title: "24/7 Support",
-    description: "Dedicated support and maintenance to keep your applications running smoothly."
-  }
+    title: "Maintenance & Support",
+    description:
+      "Bug fixes, feature additions and performance improvements for existing Laravel/Vue/React applications.",
+  },
 ];
+
 export interface Target {
   icon: string;
   title: string;
@@ -45,21 +51,21 @@ export interface Target {
 
 export const targets: Target[] = [
   {
+    icon: "FaLayerGroup",
+    title: "Clean & Scalable Code",
+    content:
+      "MVC, SOLID and the Repository–Service pattern keep the codebase easy to read, test and extend as your business grows.",
+  },
+  {
+    icon: "FaShieldAlt",
+    title: "Secure by Design",
+    content:
+      "Proper authentication, role-based access control and validation on every workflow, especially where sensitive data is involved.",
+  },
+  {
     icon: "FaBullseye",
-    title: "Pixcel Perfect",
+    title: "Built Around Your Business",
     content:
-      "You will get pixcel perfect website such as figma design using tailwind css or Bootstrap",
-  },
-  {
-    icon: "FaRegClock",
-    title: "Fast Delivery",
-    content:
-      "Time is valueable tools for working. If you give me proper time to build your dream project, I could build an awesome project ",
-  },
-  {
-    icon: "FaRegSmileBeam",
-    title: "Satisfaction",
-    content:
-      "I will try to give my best for you dream project. I think that project is valueless if I could not make happy my client",
+      "I start from your real workflow and requirements, so the system fits how you operate instead of forcing you to adapt to it.",
   },
 ];

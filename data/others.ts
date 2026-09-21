@@ -1,15 +1,16 @@
 export interface PersonalInfo {
   title: string;
   value: string;
-  icon:string;
+  icon: string;
+  href?: string;
 }
 
 export const aboutPersonalInfoItems: PersonalInfo[] = [
   { title: "Name", value: "Sahos Mia", icon:"FaUser" },
-  { title: "Location", value: "Dhaka, Bangladesh", icon: "FaMapMarkerAlt" },
-  { title: "Phone", value: "01952827301", icon: "FaPhone" },
+  { title: "Location", value: "Mohakhali, Dhaka", icon: "FaMapMarkerAlt" },
+  { title: "Phone", value: "01952827301", icon: "FaPhone", href: "tel:+8801952827301" },
   { title: "Works", value: "AgainSoft", icon: "FaBriefcase" },
-  { title: "Email", value: "sahosmia.webdev@gmail.com", icon: "FaEnvelope" },
+  { title: "Email", value: "sahosmia.webdev@gmail.com", icon: "FaEnvelope", href: "mailto:sahosmia.webdev@gmail.com" },
 ];
 
 export interface WhyWorkItem {
@@ -21,24 +22,25 @@ export interface WhyWorkItem {
 export const why_work_items: WhyWorkItem[] = [
   {
     icon: "FaRegHeart",
-    title: "Life time Support",
-    description: "You will get life time support for your dream project.",
+    title: "Reliable Support",
+    description: "I stay available after launch for bug fixes, updates and improvements — quick help whenever something needs attention.",
   },
   {
     icon: "FaRegSmile",
-    title: "Good Communication",
-    description: "I will try to give 100% for good comminication.",
+    title: "Clear Requirements & Communication",
+    description: "Requirements are analysed and documented before coding starts, and you get clear progress updates in English or Bangla.",
   },
   {
-    icon: "FaRepeat",
-    title: "Regular Update",
-    description: "You will know every update on my proggress on your project.",
+    icon: "FaCode",
+    title: "Tested & Maintainable Code",
+    description: "Clean code, PHPUnit tests and clear architecture, so the next developer (or you) can safely extend the system.",
   },
 ];
 
 export interface Contact {
   title: string;
   val: string;
+  href?: string;
   icon: string;
   variant: "orange" | "green" | "purple";
 }
@@ -46,19 +48,21 @@ export interface Contact {
 export const contacts: Contact[] = [
   {
     title: "Location",
-    val: "Chuadanga, Bangladesh",
+    val: "Mohakhali, Dhaka",
     icon: "FaMap",
     variant: "orange",
   },
   {
     title: "Phone",
     val: "01952827301",
+    href: "tel:+8801952827301",
     icon: "ImPhone",
     variant: "green",
   },
   {
     title: "Email",
     val: "sahosmia.webdev@gmail.com",
+    href: "mailto:sahosmia.webdev@gmail.com",
     icon: "FaEnvelope",
     variant: "purple",
   },
@@ -93,18 +97,18 @@ export interface Faq {
 
 export const faqs: Faq[] = [
   {
-    question: "What is your web design process?",
+    question: "What is your development process?",
     answer:
-      "Our web design process begins with a discovery phase to understand your brand, goals, and target audience. We then move to wireframing, design mockups, development, and finally, deployment. We ensure you are involved and informed at every stage.",
+      "I start by analysing your requirements and business workflow, then move to database design, development, testing and deployment. You are kept informed and involved at every stage.",
   },
   {
-    question: "How long does it take to build a website?",
+    question: "How long does a project take?",
     answer:
-      "The timeline for building a website varies depending on the complexity of the project. A simple brochure site might take 2-4 weeks, while a more complex e-commerce site could take 2-3 months. We provide a detailed timeline after the initial consultation.",
+      "It depends on the scope. A simple website can take 1-2 weeks, while a custom CRM, ERP or inventory system usually takes 1-3 months. I share a detailed timeline after we discuss your requirements.",
   },
   {
-    question: "Do you provide website maintenance services?",
+    question: "Do you provide maintenance after delivery?",
     answer:
-      "Yes, we offer ongoing website maintenance packages to ensure your site remains secure, up-to-date, and performs optimally. Our services include regular backups, security scans, and content updates.",
+      "Yes. I provide post-launch support for bug fixes, new features, updates and performance improvements on Laravel, Vue and React applications.",
   },
 ];
