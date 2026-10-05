@@ -214,20 +214,7 @@ export const portfolios: Portfolio[] = [
     type: "Design",
     duration: "1 Week",
   },
-  {
-    title: "Construction Website",
-    slug: "construction-website-react",
-    description: "A responsive construction company website built with React and Tailwind CSS.",
-    thumbnail: "/images/portfolio/construction.png",
-    images: [],
-    technology: ["React", "Tailwind"],
-    live_url: "https://sahos-mia-construction.netlify.app/",
-    github: "https://github.com/sahosmia/Construction-React-Tailwind",
-    showStatus: false,
-    client: "Contact",
-    type: "Design",
-    duration: "1 Week",
-  },
+
   {
     title: "Lonesome Labs",
     slug: "lonesome-labs-tailwind",
@@ -271,20 +258,5 @@ export const portfolios: Portfolio[] = [
     type: "Design",
     duration: "3 Days",
   },
-  {
-    title: "DEB Login Page",
-    slug: "deb-login-page",
-    description:
-      "A login page designed in Figma for Digital Experts in Bangladesh.",
-    thumbnail: "/images/portfolio/login.png",
-    images: [],
-    technology: ["Figma"],
-    live_url:
-      "https://www.behance.net/gallery/165236487/Login-Page-Design-with-Figma",
-    github: "",
-    showStatus: true,
-    client: "Contact",
-    type: "Figma Design",
-    duration: "1 Day",
-  },
+ 
 ];
